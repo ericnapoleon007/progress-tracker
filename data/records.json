@@ -1,0 +1,439 @@
+{
+  "profile": {
+    "name": "Eric Napoleon",
+    "role": "Graduate Consultant / Cloud Engineer",
+    "company": "Go Reply (Reply Group)",
+    "cohort": "Go Reply Grads 2026",
+    "startDate": "2026-09-28"
+  },
+  "projects": [
+    {
+      "id": "terra-clear",
+      "name": "TerraClear: Fixing the Last Mile of Infrastructure as Code",
+      "shortName": "TerraClear (Capstone)",
+      "category": "Graduate Capstone / Cloud Engineering",
+      "status": "In Progress",
+      "lead": "Anthony Youssef",
+      "leadEmail": "anthony.youssef@go-reply.co.uk",
+      "collaborators": [
+        {
+          "name": "Anthony Youssef",
+          "email": "anthony.youssef@go-reply.co.uk",
+          "role": "Capstone Supervisor & Senior Mentor"
+        }
+      ],
+      "startDate": "2026-10-07",
+      "targetDate": "2026-12-08",
+      "summary": "Developing an automated governance and pre-flight validation platform for Infrastructure as Code (Terraform) targeting Google Cloud. Bridges developer configurations with central platform engineering standards through deterministic DAG parsing, automated IAM permission mapping, policy separation, and GenAI-driven justification summaries.",
+      "techStack": [
+        "Python 3.12",
+        "Terraform v1.16.5",
+        "Google Cloud Platform (GCP)",
+        "Google Cloud IAM",
+        "Vertex AI / Gemini 2.5",
+        "Pytest",
+        "Streamlit",
+        "Cloud Run"
+      ],
+      "highlights": [
+        "Approved as official 2026 Go Reply Graduate Capstone project.",
+        "Authored comprehensive 13-page toolchain & macOS engineering setup guide.",
+        "Architected hybrid engine: 100% deterministic parsing & IAM lookup + GenAI for human-readable audit justification (ADR-01).",
+        "Implemented Core DAG Parser (engine/parser.py) with 14 passing automated tests in 1.4s (commit 89898c1).",
+        "Established 5x5 Enterprise Risk Register (RSK-01 to RSK-08) and immutable audit log."
+      ]
+    },
+    {
+      "id": "google-stakeholder-mapping",
+      "name": "Google Stakeholder & Commercial Lead Owner Tracker",
+      "shortName": "Google Lead & Stakeholder Tracker",
+      "category": "Commercial Operations & Event Outreach",
+      "status": "Completed / Operational",
+      "lead": "Catherine Whitecourt",
+      "leadEmail": "c.whitecourt@reply.com",
+      "collaborators": [
+        {
+          "name": "Catherine Whitecourt",
+          "email": "c.whitecourt@reply.com",
+          "role": "Project Owner / Commercial Lead"
+        },
+        {
+          "name": "Melek Kurudzhu",
+          "email": "melek.kurudzhu@go-reply.co.uk",
+          "role": "Core Collaborator"
+        }
+      ],
+      "startDate": "2026-09-10",
+      "targetDate": "2026-10-16",
+      "summary": "Designed, cleaned, and reconciled master stakeholder matrices mapping Google accounts and executives to Go Reply commercial lead owners. Facilitated targeted account engagement, partner outreach tracking, and executive meeting preparation across Reply verticals.",
+      "techStack": [
+        "Advanced Excel Modeling",
+        "Data Reconciliation & Deduplication",
+        "Stakeholder Mapping",
+        "Commercial Operations",
+        "Pipeline & Event Tracking"
+      ],
+      "highlights": [
+        "Consolidated disparate 2025 Google contact lists into an updated 2026 unified master database.",
+        "Mapped key Google executives (SVP EMEA, Global Engineering, AI Leads) to dedicated Reply Sales and Executive owners (e.g., Reply Holding, Go Reply).",
+        "Structured the 'Googlers - Go Reply Lead Owners' operational tracker for outreach logging, response tracking, and follow-ups.",
+        "Managed guest invitation tracking and attendance lists for targeted partner events (including Boules Bar Googlers Sep 2026)."
+      ]
+    },
+    {
+      "id": "certifications",
+      "name": "Google Cloud Professional Certifications & Hands-On Accreditations",
+      "shortName": "Certifications & Hands-On Accreditations",
+      "category": "Professional Credentials & Technical Enablement",
+      "status": "Active / Achieved",
+      "lead": "Google Cloud",
+      "leadEmail": "",
+      "collaborators": [],
+      "startDate": "2026-10-01",
+      "targetDate": "Ongoing",
+      "summary": "Achieved multiple industry-recognized Google Cloud certifications and hands-on laboratory specializations within the first 6 weeks of joining Go Reply, validating domain competence across Cloud architecture, Generative AI, and enterprise Agent platforms.",
+      "techStack": [
+        "Google Cloud Platform (GCP)",
+        "Cloud Digital Leader (CDL)",
+        "Generative AI Leader",
+        "Gemini Enterprise",
+        "Model Armor",
+        "Gemini Agent Platform"
+      ],
+      "highlights": [
+        "Google Cloud Certified - Cloud Digital Leader (Passed 05 Oct 2026).",
+        "Google Cloud Certified - Generative AI Leader (Passed 09 Oct 2026).",
+        "Completed 3 intensive hands-on lab sessions on Gemini Enterprise (Deploy with Model Armor, Govern Agent Access, Add Agents to Gemini Enterprise) on 13 Oct 2026."
+      ]
+    },
+    {
+      "id": "community-events",
+      "name": "Reply & Google Cloud Community Meetups & Technical Seminars",
+      "shortName": "Community Leadership & Technical Seminars",
+      "category": "Company Citizenship & Continuous Learning",
+      "status": "Active Contributor",
+      "lead": "James Housden",
+      "leadEmail": "j.housden@reply.com",
+      "collaborators": [
+        {
+          "name": "James Housden",
+          "email": "j.housden@reply.com",
+          "role": "Organizer / Techie Meetup Lead"
+        },
+        {
+          "name": "Vaylern Chozha Nathan",
+          "email": "v.chozhanathan@reply.com",
+          "role": "Speaker / Google SecOps Specialist"
+        },
+        {
+          "name": "Faris Moulay",
+          "email": "f.moulay@reply.com",
+          "role": "Speaker / Google SecOps Specialist"
+        }
+      ],
+      "startDate": "2026-10-06",
+      "targetDate": "Ongoing",
+      "summary": "Actively contributing to Go Reply community events and deepening knowledge through technical seminars, including volunteering at flagship partner meetups and exploring cutting-edge security operations architectures.",
+      "techStack": [
+        "Google SecOps",
+        "Agentic SOC",
+        "Event Coordination",
+        "Community Networking"
+      ],
+      "highlights": [
+        "Volunteered to set up and manage the Reply & Google Cloud Techie Meetup Q4 alongside James Housden (08 Oct 2026).",
+        "Participated in deep-dive technical seminar 'Agentic SOC in Action with Google SecOps' hosted by Vaylern Chozha Nathan and Faris Moulay (06 Oct 2026)."
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "id": "evt-001",
+      "date": "2026-09-28",
+      "title": "Joined Go Reply as Graduate Consultant",
+      "projectId": "onboarding",
+      "projectName": "Company Induction & Onboarding",
+      "category": "Career Milestone",
+      "lead": "Go Reply Leadership",
+      "collaborators": [
+        "2026 Graduate Cohort"
+      ],
+      "description": "Officially commenced employment at Go Reply under the 2026 Graduate Program on 28th September 2026. Began induction and alignment with the cloud practice.",
+      "impact": "Officially onboarded to Go Reply, integrated into development environments and graduate training tracks.",
+      "tags": [
+        "#Milestone",
+        "#Onboarding",
+        "#GoReply"
+      ]
+    },
+    {
+      "id": "evt-002",
+      "date": "2026-09-29",
+      "title": "Commenced Google Stakeholder Reconciliation Project",
+      "projectId": "google-stakeholder-mapping",
+      "projectName": "Google Lead & Stakeholder Tracker",
+      "category": "Commercial Operations",
+      "lead": "Catherine Whitecourt",
+      "collaborators": [
+        "Catherine Whitecourt",
+        "Melek Kurudzhu"
+      ],
+      "description": "Initiated data audit and cleanup across historical Google partner contact spreadsheets for Catherine Whitecourt and Melek Kurudzhu.",
+      "impact": "Established unified source of truth for Google partner communications across the business.",
+      "tags": [
+        "#CommercialOps",
+        "#StakeholderManagement",
+        "#Excel"
+      ]
+    },
+    {
+      "id": "evt-003",
+      "date": "2026-09-30",
+      "title": "Delivered Boules Bar Event Invitation Tracking Matrix",
+      "projectId": "google-stakeholder-mapping",
+      "projectName": "Google Lead & Stakeholder Tracker",
+      "category": "Commercial Operations",
+      "lead": "Catherine Whitecourt",
+      "collaborators": [
+        "Melek Kurudzhu"
+      ],
+      "description": "Structured targeted invitation ledger for the Googlers networking event at Boules Bar. Monitored invitations, RSVP statuses, and stakeholder alignments in real time.",
+      "impact": "Enabled smooth execution and transparent attendee tracking for high-priority Google partners.",
+      "tags": [
+        "#CommercialOps",
+        "#EventTracking",
+        "#PartnerRelations"
+      ]
+    },
+    {
+      "id": "evt-011",
+      "date": "2026-10-05",
+      "title": "Earned Certification: Google Cloud Certified - Cloud Digital Leader",
+      "projectId": "certifications",
+      "projectName": "Certifications & Accreditations",
+      "category": "Professional Certification",
+      "lead": "Google Cloud",
+      "collaborators": [],
+      "description": "Successfully passed the official Google Cloud Certified - Cloud Digital Leader examination, proving foundational mastery of cloud concepts, Google Cloud infrastructure, data modernization, and business transformation value drivers.",
+      "impact": "Earned first formal Google Cloud certification within 5 weeks of joining Go Reply.",
+      "tags": [
+        "#Certification",
+        "#GoogleCloud",
+        "#CloudDigitalLeader",
+        "#Milestone"
+      ]
+    },
+    {
+      "id": "evt-012",
+      "date": "2026-10-06",
+      "title": "Attended Seminar: Agentic SOC in Action with Google SecOps",
+      "projectId": "community-events",
+      "projectName": "Community & Tech Seminars",
+      "category": "Continuous Professional Development",
+      "lead": "Vaylern Chozha Nathan & Faris Moulay",
+      "collaborators": [
+        "Vaylern Chozha Nathan",
+        "Faris Moulay"
+      ],
+      "description": "Participated in an in-depth technical seminar delivered by Vaylern Chozha Nathan (v.chozhanathan@reply.com) and Faris Moulay (f.moulay@reply.com) covering modern Agentic Security Operations Centers (SOC) using Google SecOps, automated threat hunting, alert triage, and Gemini-assisted investigation playbooks.",
+      "impact": "Deepened technical expertise in agentic architectures and enterprise cybersecurity on Google Cloud.",
+      "tags": [
+        "#SecOps",
+        "#Cybersecurity",
+        "#AI-Agents",
+        "#GoogleCloud",
+        "#KnowledgeSharing"
+      ]
+    },
+    {
+      "id": "evt-004",
+      "date": "2026-10-07",
+      "title": "Initial Capstone Ideation & Architecture Exploration",
+      "projectId": "terra-clear",
+      "projectName": "TerraClear (Capstone)",
+      "category": "Engineering / Capstone",
+      "lead": "Anthony Youssef",
+      "collaborators": [
+        "Anthony Youssef"
+      ],
+      "description": "Held formal 30-minute scoping discussion with supervisor Anthony Youssef. Explored candidate challenges in enterprise cloud infrastructure, specifically zeroing in on the friction between developer Terraform code and central security IAM approval gates.",
+      "impact": "Defined strategic focus: solving the last-mile deployment bottleneck in IaC with automated policy validation.",
+      "tags": [
+        "#Capstone",
+        "#Architecture",
+        "#GCP",
+        "#Terraform"
+      ]
+    },
+    {
+      "id": "evt-013",
+      "date": "2026-10-08",
+      "title": "Volunteered & Managed: Reply and Google Cloud Techie Meetup Q4",
+      "projectId": "community-events",
+      "projectName": "Community & Tech Seminars",
+      "category": "Event Management & Volunteering",
+      "lead": "James Housden",
+      "collaborators": [
+        "James Housden"
+      ],
+      "description": "Volunteered to assist James Housden (j.housden@reply.com) in setting up, coordinating, and managing the Reply and Google Cloud Techie Meetup Q4. Facilitated attendee arrivals, logistical support, and direct engagement with Google Cloud engineers and Reply practitioners.",
+      "impact": "Demonstrated community leadership and active citizenship in strengthening the Reply-Google partner ecosystem.",
+      "tags": [
+        "#Volunteering",
+        "#EventManagement",
+        "#GoogleCloud",
+        "#Community",
+        "#Networking"
+      ]
+    },
+    {
+      "id": "evt-014",
+      "date": "2026-10-09",
+      "title": "Earned Certification: Google Cloud Certified - Generative AI Leader",
+      "projectId": "certifications",
+      "projectName": "Certifications & Accreditations",
+      "category": "Professional Certification",
+      "lead": "Google Cloud",
+      "collaborators": [],
+      "description": "Successfully achieved the official Google Cloud Certified - Generative AI Leader certification. Validated enterprise Generative AI strategy, Gemini capabilities, responsible AI frameworks, prompt design paradigms, and business adoption roadmaps.",
+      "impact": "Second official Google Cloud credential attained within 6 weeks; cements technical credentials for AI & Capstone initiatives.",
+      "tags": [
+        "#Certification",
+        "#GoogleCloud",
+        "#GenAI",
+        "#Gemini",
+        "#AILeader"
+      ]
+    },
+    {
+      "id": "evt-005",
+      "date": "2026-10-12",
+      "title": "Topic Selection & Formal Project Scope Registration",
+      "projectId": "terra-clear",
+      "projectName": "TerraClear (Capstone)",
+      "category": "Engineering / Capstone",
+      "lead": "Anthony Youssef",
+      "collaborators": [
+        "Anthony Youssef"
+      ],
+      "description": "Presented scope candidate to Anthony Youssef. Officially selected 'TerraClear: Fixing the Last Mile of Infrastructure as Code'. Drafted and submitted project registration for Go Reply Grads 2026 assessment.",
+      "impact": "Formal sign-off and approval on Capstone topic and project charter.",
+      "tags": [
+        "#Capstone",
+        "#Milestone",
+        "#Approval"
+      ]
+    },
+    {
+      "id": "evt-015",
+      "date": "2026-10-13",
+      "title": "Completed 3x Gemini Enterprise Hands-On Lab Accreditations",
+      "projectId": "certifications",
+      "projectName": "Certifications & Accreditations",
+      "category": "Practical Technical Labs",
+      "lead": "Google Cloud",
+      "collaborators": [],
+      "description": "Completed three intensive, hands-on lab sessions on enterprise AI deployment and agent governance: 1) Deploy Gemini Enterprise with Workspace Data Sources and Model Armor, 2) Govern Agent Access with Gemini Enterprise Agent Platform, 3) Add Agents to Gemini Enterprise.",
+      "impact": "Practical mastery of Model Armor safety layers, enterprise data source grounding, and agent IAM permission boundaries.",
+      "tags": [
+        "#HandsOnLabs",
+        "#GeminiEnterprise",
+        "#ModelArmor",
+        "#AIAgents",
+        "#Governance"
+      ]
+    },
+    {
+      "id": "evt-006",
+      "date": "2026-10-13",
+      "title": "Authored 13-Page macOS & VS Code Engineering Setup Guide",
+      "projectId": "terra-clear",
+      "projectName": "TerraClear (Capstone)",
+      "category": "Documentation & Tooling",
+      "lead": "Anthony Youssef",
+      "collaborators": [],
+      "description": "Authored comprehensive setup guide covering Homebrew, Python 3.12, Terraform v1.16+, Google Cloud SDK v588+, and VS Code linting/security configuration.",
+      "impact": "Standardized reusable workstation setup documentation that can be leveraged by other engineers and future graduate cohorts.",
+      "tags": [
+        "#Documentation",
+        "#DeveloperExperience",
+        "#Tooling"
+      ]
+    },
+    {
+      "id": "evt-007",
+      "date": "2026-10-14",
+      "title": "Toolchain Verification & Local Environment Hardening",
+      "projectId": "terra-clear",
+      "projectName": "TerraClear (Capstone)",
+      "category": "Engineering",
+      "lead": "Anthony Youssef",
+      "collaborators": [],
+      "description": "Completed full local installation and verified CLI toolchains: Homebrew, Python 3.12.7, Terraform v1.16.5, Google Cloud CLI v588.0.0.",
+      "impact": "100% reproducible development environment confirmed ready for automated engine development.",
+      "tags": [
+        "#DevOps",
+        "#Toolchain",
+        "#Setup"
+      ]
+    },
+    {
+      "id": "evt-009",
+      "date": "2026-10-15",
+      "title": "Built Core DAG Parser & Passed 14 Automated Tests",
+      "projectId": "terra-clear",
+      "projectName": "TerraClear (Capstone)",
+      "category": "Engineering",
+      "lead": "Anthony Youssef",
+      "collaborators": [],
+      "description": "Built corpus/01-bucket-topic test scenario, implemented engine/parser.py DAG engine, established 5x5 Enterprise Risk Register (RSK-01 to RSK-08), and authored EXPLAINED.md. Executed test suite with 14/14 tests passing in 1.4s.",
+      "impact": "Completed Week 1 milestone ahead of schedule; Phase 1 marked 100% complete and Phase 2 initiated early.",
+      "tags": [
+        "#Python",
+        "#UnitTesting",
+        "#Automation",
+        "#Milestone"
+      ]
+    },
+    {
+      "id": "evt-008",
+      "date": "2026-10-15",
+      "title": "Repository Scaffold, Enterprise Guardrails & Architecture Decisions",
+      "projectId": "terra-clear",
+      "projectName": "TerraClear (Capstone)",
+      "category": "Engineering / Architecture",
+      "lead": "Anthony Youssef",
+      "collaborators": [
+        "Anthony Youssef"
+      ],
+      "description": "Initialized Git repository with modular package structure (engine, corpus, config, harness, app, tests, docs). Created 44-line security .gitignore to prevent credential leaks. Locked ADR-01 (deterministic hybrid parser + LLM justification only) and ADR-02 (external policy-driven central vs local separation) with Anthony Youssef.",
+      "impact": "Established zero-security-hallucination architectural baseline for enterprise clients.",
+      "tags": [
+        "#Architecture",
+        "#Security",
+        "#ADR",
+        "#Git"
+      ]
+    },
+    {
+      "id": "evt-010",
+      "date": "2026-10-16",
+      "title": "Completed Master Google Stakeholder & Lead Owner Matrix",
+      "projectId": "google-stakeholder-mapping",
+      "projectName": "Google Lead & Stakeholder Tracker",
+      "category": "Commercial Operations",
+      "lead": "Catherine Whitecourt",
+      "collaborators": [
+        "Catherine Whitecourt",
+        "Melek Kurudzhu"
+      ],
+      "description": "Finalized comprehensive 2026 stakeholder mapping document and Go Reply lead ownership register. Documented direct contacts for senior Google executives (SVP EMEA, CTO, VP AI) aligned with Reply business leaders.",
+      "impact": "Delivered clean, operational commercial reference tool facilitating cross-vertical account collaboration.",
+      "tags": [
+        "#Deliverable",
+        "#CommercialOps",
+        "#StakeholderManagement"
+      ]
+    }
+  ]
+}

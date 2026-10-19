@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eric Napoleon | Career & Impact Tracker</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <!-- Lucide Icons via unpkg -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    /* Custom sleek scrollbar for horizontal timeline */
+    .horizontal-scroll {
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e1 #f1f5f9;
+      scroll-behavior: smooth;
+    }
+    .dark .horizontal-scroll {
+      scrollbar-color: #475569 #1e293b;
+    }
+    .horizontal-scroll::-webkit-scrollbar {
+      height: 8px;
+    }
+    .horizontal-scroll::-webkit-scrollbar-track {
+      background: #f1f5f9;
+      border-radius: 9999px;
+    }
+    .dark .horizontal-scroll::-webkit-scrollbar-track {
+      background: #1e293b;
+    }
+    .horizontal-scroll::-webkit-scrollbar-thumb {
+      background-color: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .dark .horizontal-scroll::-webkit-scrollbar-thumb {
+      background-color: #475569;
+    }
+    .horizontal-scroll::-webkit-scrollbar-thumb:hover {
+      background-color: #94a3b8;
+    }
+    .dark .horizontal-scroll::-webkit-scrollbar-thumb:hover {
+      background-color: #64748b;
+    }
+
+    sup {
+      font-size: 0.7em;
+      top: -0.4em;
+    }
+
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      .horizontal-scroll {
+        overflow-x: visible !important;
+        display: block !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 antialiased min-h-screen transition-colors duration-200">
+
+  <!-- Top Navigation Header with Fixed Height and Safe Padding -->
+  <header class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 shadow-xs transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between min-h-[68px] py-2.5">
+        <!-- Brand Identity -->
+        <div class="flex items-center space-x-3 shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center text-white font-bold text-base shadow-sm shrink-0">
+            EN
+          </div>
+          <div class="flex flex-col justify-center">
+            <div class="flex items-center space-x-2">
+              <span class="text-base font-bold text-slate-900 dark:text-white tracking-tight leading-none whitespace-nowrap">Eric Napoleon</span>
+              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-sky-50 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 leading-none">
+                Go Reply
+              </span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-normal mt-0.5 whitespace-nowrap">Career & Impact Log • Grads 2026</p>
+          </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <nav class="hidden md:flex items-center p-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-300 no-print transition-colors">
+          <button onclick="switchTab('timeline')" id="tab-timeline" class="tab-btn px-3 py-1.5 rounded-md bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs transition-all">
+            Horizontal Timeline
+          </button>
+          <button onclick="switchTab('projects')" id="tab-projects" class="tab-btn px-3 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white transition-all">
+            Projects & Tracks
+          </button>
+          <button onclick="switchTab('supervisor')" id="tab-supervisor" class="tab-btn px-3 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white transition-all flex items-center space-x-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Supervisor 1-on-1</span>
+          </button>
+          <button onclick="switchTab('collaborators')" id="tab-collaborators" class="tab-btn px-3 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white transition-all">
+            Stakeholders & Leads
+          </button>
+        </nav>
+
+        <!-- Quick Action Buttons -->
+        <div class="flex items-center space-x-2 no-print shrink-0">
+          <!-- Dark Mode Toggle Button -->
+          <button onclick="toggleDarkMode()" id="themeToggleBtn" class="inline-flex items-center justify-center p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition" title="Toggle Dark / Light Mode">
+            <i data-lucide="moon" id="themeIcon" class="w-4 h-4"></i>
+          </button>
+
+          <button onclick="window.print()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200 transition">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+            <span class="hidden sm:inline">Print / PDF</span>
+          </button>
+
+          <button onclick="openAddModal()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-xs transition">
+            <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+            <span>Add Entry</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+
+    <!-- KPI Summary Row -->
+    <section class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs transition-colors">
+        <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">Joined Go Reply</div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">28<sup>th</sup> Sep 2026</div>
+        <div class="text-xs text-emerald-600 dark:text-emerald-400 font-medium mt-1 flex items-center">
+          <i data-lucide="check-circle" class="w-3.5 h-3.5 mr-1"></i> Grads 2026 Cohort
+        </div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs transition-colors">
+        <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">Official Certifications</div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">2 Certs</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">+ 3 Gemini Enterprise Labs</div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs transition-colors">
+        <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">Activities Logged</div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-indigo-600 dark:text-indigo-400" id="stat-total-events">15</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">4 Distinct Tracks & Initiatives</div>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs transition-colors">
+        <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">Key Stakeholders & Leads</div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-sky-600 dark:text-sky-400">6 People</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Supervisors, Leads & Partners</div>
+      </div>
+    </section>
+
+    <!-- Search & Filter Bar (No-Print) -->
+    <section class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs mb-6 no-print transition-colors">
+      <div class="flex flex-col lg:flex-row gap-4 items-center justify-between">
+        <div class="relative w-full lg:w-96">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 dark:text-slate-500 absolute left-3.5 top-3"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search activities, certs, people, keywords..."
+            class="w-full pl-10 pr-4 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+            oninput="filterTimeline()"
+          />
+        </div>
+
+        <!-- Filter Chips -->
+        <div class="flex flex-wrap items-center gap-2 w-full lg:w-auto">
+          <span class="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mr-1">Filter:</span>
+          <button onclick="setFilter('all')" id="btn-filter-all" class="filter-chip px-3 py-1 rounded-full text-xs font-semibold bg-indigo-600 text-white transition">
+            All (15)
+          </button>
+          <button onclick="setFilter('terra-clear')" id="btn-filter-terra-clear" class="filter-chip px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+            TerraClear (Capstone)
+          </button>
+          <button onclick="setFilter('certifications')" id="btn-filter-certifications" class="filter-chip px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+            Certifications & Labs
+          </button>
+          <button onclick="setFilter('google-stakeholder-mapping')" id="btn-filter-google-stakeholder-mapping" class="filter-chip px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+            Google Stakeholder Tracker
+          </button>
+          <button onclick="setFilter('community-events')" id="btn-filter-community-events" class="filter-chip px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+            Community & Seminars
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 1: HORIZONTAL TIMELINE (Left to Right: Joining -> Latest) -->
+    <section id="view-timeline" class="view-panel">
+      <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xs p-6 sm:p-8 transition-colors">
+        <!-- Timeline Header with Navigation Controls -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800 mb-6">
+          <div>
+            <div class="flex items-center space-x-2">
+              <h2 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Your Journey at Go Reply</h2>
+              <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+                Left &rarr; Right (Chronological)
+              </span>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+              Scroll horizontally from your first day (<strong>28<sup>th</sup> September 2026</strong>) to the most recent milestones (<strong>16<sup>th</sup> October 2026</strong>).
+            </p>
+          </div>
+
+          <!-- Quick Navigation Buttons -->
+          <div class="flex items-center space-x-2 no-print">
+            <button onclick="scrollToStart()" class="px-3 py-1.5 text-xs font-semibold bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg transition flex items-center space-x-1" title="Jump to Day 1">
+              <i data-lucide="chevrons-left" class="w-3.5 h-3.5"></i>
+              <span>Start (28<sup>th</sup> Sep)</span>
+            </button>
+            <button onclick="scrollTimeline(-400)" class="p-2 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition" title="Scroll Left">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i>
+            </button>
+            <button onclick="scrollTimeline(400)" class="p-2 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition" title="Scroll Right">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+            <button onclick="scrollToEnd()" class="px-3 py-1.5 text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300 rounded-lg transition flex items-center space-x-1" title="Jump to Latest">
+              <span>Latest (16<sup>th</sup> Oct)</span>
+              <i data-lucide="chevrons-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Horizontal Scroll Container -->
+        <div class="relative py-4">
+          <div
+            id="horizontalTimelineContainer"
+            class="horizontal-scroll flex gap-6 overflow-x-auto pb-6 pt-2 items-stretch"
+            style="scroll-snap-type: x mandatory;"
+          >
+            <!-- Populated via JavaScript (Left = 28 Sep 2026 -> Right = Latest) -->
+          </div>
+        </div>
+
+        <!-- Bottom Guidance Footnote -->
+        <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-400 dark:text-slate-500">
+          <div class="flex items-center space-x-2">
+            <i data-lucide="mouse-pointer" class="w-3.5 h-3.5"></i>
+            <span>Tip: Use mouse wheel, trackpad swipe, or the arrow buttons above to glide horizontally through your career timeline.</span>
+          </div>
+          <span id="timeline-count-badge" class="font-medium text-slate-600 dark:text-slate-300">Showing 15 milestones</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 2: Deep-Dive Projects & Tracks -->
+    <section id="view-projects" class="view-panel hidden">
+      <div class="space-y-6" id="projectsContainer">
+        <!-- Populated by JavaScript -->
+      </div>
+    </section>
+
+    <!-- VIEW 3: Supervisor 1-on-1 Mode -->
+    <section id="view-supervisor" class="view-panel hidden">
+      <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-8 shadow-xl mb-8 border border-slate-800">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div>
+            <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 mb-3">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 mr-2 animate-pulse"></span>
+              Supervisor Briefing View
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Executive Status & 1-on-1 Briefing</h2>
+            <p class="text-slate-300 text-sm mt-1 max-w-2xl">
+              High-impact synthesized summary designed for fast executive check-ins with Anthony Youssef and Go Reply leadership.
+            </p>
+          </div>
+          <button onclick="window.print()" class="no-print self-start md:self-auto px-4 py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-xl text-xs font-bold text-white border border-white/20 transition flex items-center space-x-2">
+            <i data-lucide="printer" class="w-4 h-4"></i>
+            <span>Export Briefing Sheet</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Column 1: Accomplished & Shipped -->
+        <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs transition-colors">
+          <div class="flex items-center space-x-2 text-emerald-600 dark:text-emerald-400 mb-4">
+            <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+            <h3 class="font-bold text-slate-900 dark:text-white">Delivered & Validated</h3>
+          </div>
+          <ul class="space-y-3.5 text-sm text-slate-600 dark:text-slate-300">
+            <li class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
+              <div class="font-semibold text-slate-900 dark:text-white text-xs">Joined Go Reply (28<sup>th</sup> Sep 2026)</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Commenced 2026 Graduate Program; setup and alignment completed rapidly.</p>
+            </li>
+            <li class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
+              <div class="font-semibold text-slate-900 dark:text-white text-xs">2x Google Cloud Certifications Passed</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Achieved <strong>Cloud Digital Leader</strong> (5<sup>th</sup> Oct) and <strong>Generative AI Leader</strong> (9<sup>th</sup> Oct) in under 3 weeks.</p>
+            </li>
+            <li class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
+              <div class="font-semibold text-slate-900 dark:text-white text-xs">3x Gemini Enterprise Lab Accreditations</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Completed practical labs in Model Armor deployment, agent access governance, and Workspace grounding (13<sup>th</sup> Oct).</p>
+            </li>
+            <li class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
+              <div class="font-semibold text-slate-900 dark:text-white text-xs">Capstone Phase 1 Complete Ahead of Schedule</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Toolchain verified, 13-page setup guide authored, security guardrails active, ADR-01/02 approved by Anthony Youssef.</p>
+            </li>
+            <li class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
+              <div class="font-semibold text-slate-900 dark:text-white text-xs">Deterministic DAG Parser Built (Phase 2 Early Start)</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Engine running with 14 passing automated tests in 1.4s (commit 89898c1).</p>
+            </li>
+            <li class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
+              <div class="font-semibold text-slate-900 dark:text-white text-xs">Commercial Google Stakeholder Tracker Delivered</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Reconciled master 2026 database with Catherine Whitecourt & Melek Kurudzhu; mapped lead owners & Boules Bar invites.</p>
+            </li>
+            <li class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
+              <div class="font-semibold text-slate-900 dark:text-white text-xs">Partner Community Meetup Volunteering</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Volunteered to set up and manage Reply & Google Cloud Techie Meetup Q4 with James Housden (8<sup>th</sup> Oct).</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 2: In Progress & Next Milestones -->
+        <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs transition-colors">
+          <div class="flex items-center space-x-2 text-indigo-600 dark:text-indigo-400 mb-4">
+            <i data-lucide="clock" class="w-5 h-5"></i>
+            <h3 class="font-bold text-slate-900 dark:text-white">Current Sprint & Next Up</h3>
+          </div>
+          <ul class="space-y-3.5 text-sm text-slate-600 dark:text-slate-300">
+            <li class="p-3 bg-indigo-50/50 dark:bg-indigo-950/20 rounded-xl border border-indigo-100 dark:border-indigo-900/50">
+              <div class="flex items-center justify-between">
+                <span class="font-semibold text-slate-900 dark:text-white text-xs">Test Examples & Plan Reader DAG</span>
+                <span class="text-[10px] font-bold bg-indigo-100 dark:bg-indigo-900/80 text-indigo-700 dark:text-indigo-300 px-2 py-0.5 rounded-full">40% Done</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Target: 23<sup>rd</sup> Oct 2026. Advancing multi-resource DAG scenarios.</p>
+            </li>
+            <li class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700">
+              <div class="font-semibold text-slate-900 dark:text-white text-xs">Permission Map & Central/Local Sorter</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Target: 30<sup>th</sup> Oct 2026. Building <code class="text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 px-1 py-0.5 rounded">permission_map.yaml</code> and sorter logic.</p>
+            </li>
+            <li class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700">
+              <div class="font-semibold text-slate-900 dark:text-white text-xs">Mid-Project Check-in & Demo</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Target: 13<sup>th</sup> Nov 2026. Live end-to-end run on 3 examples with supervisor review.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Dependencies, Blockers & Asks -->
+        <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs transition-colors">
+          <div class="flex items-center space-x-2 text-amber-600 dark:text-amber-400 mb-4">
+            <i data-lucide="alert-circle" class="w-5 h-5"></i>
+            <h3 class="font-bold text-slate-900 dark:text-white">Dependencies & Asks</h3>
+          </div>
+          <div class="space-y-3.5 text-sm">
+            <div class="p-3 bg-amber-50/60 dark:bg-amber-950/20 rounded-xl border border-amber-200/80 dark:border-amber-900/50">
+              <div class="font-semibold text-amber-900 dark:text-amber-300 text-xs flex items-center">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-1.5"></span>
+                DEP-01: Cloud Sandbox Project
+              </div>
+              <p class="text-xs text-slate-700 dark:text-slate-300 mt-1">
+                Required for Week 4 live harness deployment (2<sup>nd</sup> Nov). Offline mocking is active as immediate mitigation.
+              </p>
+            </div>
+            <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700">
+              <div class="font-semibold text-slate-900 dark:text-white text-xs">Supervisor Feedback Cadence</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                Scheduled weekly check-ins with Anthony Youssef to review ADR evolutions and milestone sign-offs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 4: Stakeholders Directory -->
+    <section id="view-collaborators" class="view-panel hidden">
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs p-6 sm:p-8 transition-colors">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Key Stakeholders, Mentors & Collaborators</h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mb-6">People you've delivered value for, collaborated with, or supported at Go Reply</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="collaboratorsContainer">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Add Entry Modal -->
+  <div id="addModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 hidden">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-100 dark:border-slate-800 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
+        <div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Add New Career Record</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Log an event, deliverable, or milestone</p>
+        </div>
+        <button onclick="closeAddModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form id="addForm" onsubmit="handleFormSubmit(event)" class="space-y-4 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Date</label>
+          <input type="date" id="form-date" required class="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Title / Headline</label>
+          <input type="text" id="form-title" placeholder="e.g. Passed certification / Shipped feature..." required class="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Project / Track</label>
+          <select id="form-project" class="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+            <option value="terra-clear">TerraClear (Capstone)</option>
+            <option value="certifications">Certifications & Accreditations</option>
+            <option value="google-stakeholder-mapping">Google Stakeholder & Lead Tracker</option>
+            <option value="community-events">Community Meetups & Seminars</option>
+            <option value="onboarding">Onboarding / Enablement</option>
+            <option value="other">Other Initiative</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Lead / Collaborators</label>
+          <input type="text" id="form-people" placeholder="e.g. Anthony Youssef, James Housden..." class="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Description & Context</label>
+          <textarea id="form-desc" rows="3" placeholder="What problem did you solve? What did you build?" required class="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+        </div>
+        <div>
+          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Quantifiable Impact & Deliverables</label>
+          <textarea id="form-impact" rows="2" placeholder="e.g. Official credential, 14 passing unit tests, delivered master sheet..." class="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+        </div>
+        <div>
+          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Tags (comma-separated)</label>
+          <input type="text" id="form-tags" placeholder="#Certification, #GoogleCloud, #GenAI, #Terraform" class="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+        </div>
+
+        <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-end space-x-2">
+          <button type="button" onclick="closeAddModal()" class="px-4 py-2 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-600 dark:text-slate-300 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition">
+            Cancel
+          </button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-xs transition">
+            Add to Live View
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript Logic with Embedded JSON Fallback -->
+  <script>
+    const EMBEDDED_FALLBACK = {
+  "profile": {
+    "name": "Eric Napoleon",
+    "role": "Graduate Consultant / Cloud Engineer",
+    "company": "Go Reply (Reply Group)",
+    "cohort": "Go Reply Grads 2026",
+    "startDate": "2026-09-28"
+  },
+  "projects": [
+    {
+      "id": "terra-clear",
+      "name": "TerraClear: Fixing the Last Mile of Infrastructure as Code",
+      "shortName": "TerraClear (Capstone)",
+      "category": "Graduate Capstone / Cloud Engineering",
+      "status": "In Progress",
+      "lead": "Anthony Youssef",
+      "leadEmail": "anthony.youssef@go-reply.co.uk",
+      "collaborators": [
+        {
+          "name": "Anthony Youssef",
+          "email": "anthony.youssef@go-reply.co.uk",
+          "role": "Capstone Supervisor & Senior Mentor"
+        }
+      ],
+      "startDate": "2026-10-07",
+      "targetDate": "2026-12-08",
+      "summary": "Developing an automated governance and pre-flight validation platform for Infrastructure as Code (Terraform) targeting Google Cloud. Bridges developer configurations with central platform engineering standards through deterministic DAG parsing, automated IAM permission mapping, policy separation, and GenAI-driven justification summaries.",
+      "techStack": [
+        "Python 3.12",
+        "Terraform v1.16.5",
+        "Google Cloud Platform (GCP)",
+        "Google Cloud IAM",
+        "Vertex AI / Gemini 2.5",
+        "Pytest",
+        "Streamlit",
+        "Cloud Run"
+      ],
+      "highlights": [
+        "Approved as official 2026 Go Reply Graduate Capstone project.",
+        "Authored comprehensive 13-page toolchain & macOS engineering setup guide.",
+        "Architected hybrid engine: 100% deterministic parsing & IAM lookup + GenAI for human-readable audit justification (ADR-01).",
+        "Implemented Core DAG Parser (engine/parser.py) with 14 passing automated tests in 1.4s (commit 89898c1).",
+        "Established 5x5 Enterprise Risk Register (RSK-01 to RSK-08) and immutable audit log."
+      ]
+    },
+    {
+      "id": "google-stakeholder-mapping",
+      "name": "Google Stakeholder & Commercial Lead Owner Tracker",
+      "shortName": "Google Lead & Stakeholder Tracker",
+      "category": "Commercial Operations & Event Outreach",
+      "status": "Completed / Operational",
+      "lead": "Catherine Whitecourt",
+      "leadEmail": "c.whitecourt@reply.com",
+      "collaborators": [
+        {
+          "name": "Catherine Whitecourt",
+          "email": "c.whitecourt@reply.com",
+          "role": "Project Owner / Commercial Lead"
+        },
+        {
+          "name": "Melek Kurudzhu",
+          "email": "melek.kurudzhu@go-reply.co.uk",
+          "role": "Core Collaborator"
+        }
+      ],
+      "startDate": "2026-09-10",
+      "targetDate": "2026-10-16",
+      "summary": "Designed, cleaned, and reconciled master stakeholder matrices mapping Google accounts and executives to Go Reply commercial lead owners. Facilitated targeted account engagement, partner outreach tracking, and executive meeting preparation across Reply verticals.",
+      "techStack": [
+        "Advanced Excel Modeling",
+        "Data Reconciliation & Deduplication",
+        "Stakeholder Mapping",
+        "Commercial Operations",
+        "Pipeline & Event Tracking"
+      ],
+      "highlights": [
+        "Consolidated disparate 2025 Google contact lists into an updated 2026 unified master database.",
+        "Mapped key Google executives (SVP EMEA, Global Engineering, AI Leads) to dedicated Reply Sales and Executive owners (e.g., Reply Holding, Go Reply).",
+        "Structured the 'Googlers - Go Reply Lead Owners' operational tracker for outreach logging, response tracking, and follow-ups.",
+        "Managed guest invitation tracking and attendance lists for targeted partner events (including Boules Bar Googlers Sep 2026)."
+      ]
+    },
+    {
+      "id": "certifications",
+      "name": "Google Cloud Professional Certifications & Hands-On Accreditations",
+      "shortName": "Certifications & Hands-On Accreditations",
+      "category": "Professional Credentials & Technical Enablement",
+      "status": "Active / Achieved",
+      "lead": "Google Cloud",
+      "leadEmail": "",
+      "collaborators": [],
+      "startDate": "2026-10-01",
+      "targetDate": "Ongoing",
+      "summary": "Achieved multiple industry-recognized Google Cloud certifications and hands-on laboratory specializations within the first 6 weeks of joining Go Reply, validating domain competence across Cloud architecture, Generative AI, and enterprise Agent platforms.",
+      "techStack": [
+        "Google Cloud Platform (GCP)",
+        "Cloud Digital Leader (CDL)",
+        "Generative AI Leader",
+        "Gemini Enterprise",
+        "Model Armor",
+        "Gemini Agent Platform"
+      ],
+      "highlights": [
+        "Google Cloud Certified - Cloud Digital Leader (Passed 05 Oct 2026).",
+        "Google Cloud Certified - Generative AI Leader (Passed 09 Oct 2026).",
+        "Completed 3 intensive hands-on lab sessions on Gemini Enterprise (Deploy with Model Armor, Govern Agent Access, Add Agents to Gemini Enterprise) on 13 Oct 2026."
+      ]
+    },
+    {
+      "id": "community-events",
+      "name": "Reply & Google Cloud Community Meetups & Technical Seminars",
+      "shortName": "Community Leadership & Technical Seminars",
+      "category": "Company Citizenship & Continuous Learning",
+      "status": "Active Contributor",
+      "lead": "James Housden",
+      "leadEmail": "j.housden@reply.com",
+      "collaborators": [
+        {
+          "name": "James Housden",
+          "email": "j.housden@reply.com",
+          "role": "Organizer / Techie Meetup Lead"
+        },
+        {
+          "name": "Vaylern Chozha Nathan",
+          "email": "v.chozhanathan@reply.com",
+          "role": "Speaker / Google SecOps Specialist"
+        },
+        {
+          "name": "Faris Moulay",
+          "email": "f.moulay@reply.com",
+          "role": "Speaker / Google SecOps Specialist"
+        }
+      ],
+      "startDate": "2026-10-06",
+      "targetDate": "Ongoing",
+      "summary": "Actively contributing to Go Reply community events and deepening knowledge through technical seminars, including volunteering at flagship partner meetups and exploring cutting-edge security operations architectures.",
+      "techStack": [
+        "Google SecOps",
+        "Agentic SOC",
+        "Event Coordination",
+        "Community Networking"
+      ],
+      "highlights": [
+        "Volunteered to set up and manage the Reply & Google Cloud Techie Meetup Q4 alongside James Housden (08 Oct 2026).",
+        "Participated in deep-dive technical seminar 'Agentic SOC in Action with Google SecOps' hosted by Vaylern Chozha Nathan and Faris Moulay (06 Oct 2026)."
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "id": "evt-001",
+      "date": "2026-09-28",
+      "title": "Joined Go Reply as Graduate Consultant",
+      "projectId": "onboarding",
+      "projectName": "Company Induction & Onboarding",
+      "category": "Career Milestone",
+      "lead": "Go Reply Leadership",
+      "collaborators": [
+        "2026 Graduate Cohort"
+      ],
+      "description": "Officially commenced employment at Go Reply under the 2026 Graduate Program on 28th September 2026. Began induction and alignment with the cloud practice.",
+      "impact": "Officially onboarded to Go Reply, integrated into development environments and graduate training tracks.",
+      "tags": [
+        "#Milestone",
+        "#Onboarding",
+        "#GoReply"
+      ]
+    },
+    {
+      "id": "evt-002",
+      "date": "2026-09-29",
+      "title": "Commenced Google Stakeholder Reconciliation Project",
+      "projectId": "google-stakeholder-mapping",
+      "projectName": "Google Lead & Stakeholder Tracker",
+      "category": "Commercial Operations",
+      "lead": "Catherine Whitecourt",
+      "collaborators": [
+        "Catherine Whitecourt",
+        "Melek Kurudzhu"
+      ],
+      "description": "Initiated data audit and cleanup across historical Google partner contact spreadsheets for Catherine Whitecourt and Melek Kurudzhu.",
+      "impact": "Established unified source of truth for Google partner communications across the business.",
+      "tags": [
+        "#CommercialOps",
+        "#StakeholderManagement",
+        "#Excel"
+      ]
+    },
+    {
+      "id": "evt-003",
+      "date": "2026-09-30",
+      "title": "Delivered Boules Bar Event Invitation Tracking Matrix",
+      "projectId": "google-stakeholder-mapping",
+      "projectName": "Google Lead & Stakeholder Tracker",
+      "category": "Commercial Operations",
+      "lead": "Catherine Whitecourt",
+      "collaborators": [
+        "Melek Kurudzhu"
+      ],
+      "description": "Structured targeted invitation ledger for the Googlers networking event at Boules Bar. Monitored invitations, RSVP statuses, and stakeholder alignments in real time.",
+      "impact": "Enabled smooth execution and transparent attendee tracking for high-priority Google partners.",
+      "tags": [
+        "#CommercialOps",
+        "#EventTracking",
+        "#PartnerRelations"
+      ]
+    },
+    {
+      "id": "evt-011",
+      "date": "2026-10-05",
+      "title": "Earned Certification: Google Cloud Certified - Cloud Digital Leader",
+      "projectId": "certifications",
+      "projectName": "Certifications & Accreditations",
+      "category": "Professional Certification",
+      "lead": "Google Cloud",
+      "collaborators": [],
+      "description": "Successfully passed the official Google Cloud Certified - Cloud Digital Leader examination, proving foundational mastery of cloud concepts, Google Cloud infrastructure, data modernization, and business transformation value drivers.",
+      "impact": "Earned first formal Google Cloud certification within 5 weeks of joining Go Reply.",
+      "tags": [
+        "#Certification",
+        "#GoogleCloud",
+        "#CloudDigitalLeader",
+        "#Milestone"
+      ]
+    },
+    {
+      "id": "evt-012",
+      "date": "2026-10-06",
+      "title": "Attended Seminar: Agentic SOC in Action with Google SecOps",
+      "projectId": "community-events",
+      "projectName": "Community & Tech Seminars",
+      "category": "Continuous Professional Development",
+      "lead": "Vaylern Chozha Nathan & Faris Moulay",
+      "collaborators": [
+        "Vaylern Chozha Nathan",
+        "Faris Moulay"
+      ],
+      "description": "Participated in an in-depth technical seminar delivered by Vaylern Chozha Nathan (v.chozhanathan@reply.com) and Faris Moulay (f.moulay@reply.com) covering modern Agentic Security Operations Centers (SOC) using Google SecOps, automated threat hunting, alert triage, and Gemini-assisted investigation playbooks.",
+      "impact": "Deepened technical expertise in agentic architectures and enterprise cybersecurity on Google Cloud.",
+      "tags": [
+        "#SecOps",
+        "#Cybersecurity",
+        "#AI-Agents",
+        "#GoogleCloud",
+        "#KnowledgeSharing"
+      ]
+    },
+    {
+      "id": "evt-004",
+      "date": "2026-10-07",
+      "title": "Initial Capstone Ideation & Architecture Exploration",
+      "projectId": "terra-clear",
+      "projectName": "TerraClear (Capstone)",
+      "category": "Engineering / Capstone",
+      "lead": "Anthony Youssef",
+      "collaborators": [
+        "Anthony Youssef"
+      ],
+      "description": "Held formal 30-minute scoping discussion with supervisor Anthony Youssef. Explored candidate challenges in enterprise cloud infrastructure, specifically zeroing in on the friction between developer Terraform code and central security IAM approval gates.",
+      "impact": "Defined strategic focus: solving the last-mile deployment bottleneck in IaC with automated policy validation.",
+      "tags": [
+        "#Capstone",
+        "#Architecture",
+        "#GCP",
+        "#Terraform"
+      ]
+    },
+    {
+      "id": "evt-013",
+      "date": "2026-10-08",
+      "title": "Volunteered & Managed: Reply and Google Cloud Techie Meetup Q4",
+      "projectId": "community-events",
+      "projectName": "Community & Tech Seminars",
+      "category": "Event Management & Volunteering",
+      "lead": "James Housden",
+      "collaborators": [
+        "James Housden"
+      ],
+      "description": "Volunteered to assist James Housden (j.housden@reply.com) in setting up, coordinating, and managing the Reply and Google Cloud Techie Meetup Q4. Facilitated attendee arrivals, logistical support, and direct engagement with Google Cloud engineers and Reply practitioners.",
+      "impact": "Demonstrated community leadership and active citizenship in strengthening the Reply-Google partner ecosystem.",
+      "tags": [
+        "#Volunteering",
+        "#EventManagement",
+        "#GoogleCloud",
+        "#Community",
+        "#Networking"
+      ]
+    },
+    {
+      "id": "evt-014",
+      "date": "2026-10-09",
+      "title": "Earned Certification: Google Cloud Certified - Generative AI Leader",
+      "projectId": "certifications",
+      "projectName": "Certifications & Accreditations",
+      "category": "Professional Certification",
+      "lead": "Google Cloud",
+      "collaborators": [],
+      "description": "Successfully achieved the official Google Cloud Certified - Generative AI Leader certification. Validated enterprise Generative AI strategy, Gemini capabilities, responsible AI frameworks, prompt design paradigms, and business adoption roadmaps.",
+      "impact": "Second official Google Cloud credential attained within 6 weeks; cements technical credentials for AI & Capstone initiatives.",
+      "tags": [
+        "#Certification",
+        "#GoogleCloud",
+        "#GenAI",
+        "#Gemini",
+        "#AILeader"
+      ]
+    },
+    {
+      "id": "evt-005",
+      "date": "2026-10-12",
+      "title": "Topic Selection & Formal Project Scope Registration",
+      "projectId": "terra-clear",
+      "projectName": "TerraClear (Capstone)",
+      "category": "Engineering / Capstone",
+      "lead": "Anthony Youssef",
+      "collaborators": [
+        "Anthony Youssef"
+      ],
+      "description": "Presented scope candidate to Anthony Youssef. Officially selected 'TerraClear: Fixing the Last Mile of Infrastructure as Code'. Drafted and submitted project registration for Go Reply Grads 2026 assessment.",
+      "impact": "Formal sign-off and approval on Capstone topic and project charter.",
+      "tags": [
+        "#Capstone",
+        "#Milestone",
+        "#Approval"
+      ]
+    },
+    {
+      "id": "evt-015",
+      "date": "2026-10-13",
+      "title": "Completed 3x Gemini Enterprise Hands-On Lab Accreditations",
+      "projectId": "certifications",
+      "projectName": "Certifications & Accreditations",
+      "category": "Practical Technical Labs",
+      "lead": "Google Cloud",
+      "collaborators": [],
+      "description": "Completed three intensive, hands-on lab sessions on enterprise AI deployment and agent governance: 1) Deploy Gemini Enterprise with Workspace Data Sources and Model Armor, 2) Govern Agent Access with Gemini Enterprise Agent Platform, 3) Add Agents to Gemini Enterprise.",
+      "impact": "Practical mastery of Model Armor safety layers, enterprise data source grounding, and agent IAM permission boundaries.",
+      "tags": [
+        "#HandsOnLabs",
+        "#GeminiEnterprise",
+        "#ModelArmor",
+        "#AIAgents",
+        "#Governance"
+      ]
+    },
+    {
+      "id": "evt-006",
+      "date": "2026-10-13",
+      "title": "Authored 13-Page macOS & VS Code Engineering Setup Guide",
+      "projectId": "terra-clear",
+      "projectName": "TerraClear (Capstone)",
+      "category": "Documentation & Tooling",
+      "lead": "Anthony Youssef",
+      "collaborators": [],
+      "description": "Authored comprehensive setup guide covering Homebrew, Python 3.12, Terraform v1.16+, Google Cloud SDK v588+, and VS Code linting/security configuration.",
+      "impact": "Standardized reusable workstation setup documentation that can be leveraged by other engineers and future graduate cohorts.",
+      "tags": [
+        "#Documentation",
+        "#DeveloperExperience",
+        "#Tooling"
+      ]
+    },
+    {
+      "id": "evt-007",
+      "date": "2026-10-14",
+      "title": "Toolchain Verification & Local Environment Hardening",
+      "projectId": "terra-clear",
+      "projectName": "TerraClear (Capstone)",
+      "category": "Engineering",
+      "lead": "Anthony Youssef",
+      "collaborators": [],
+      "description": "Completed full local installation and verified CLI toolchains: Homebrew, Python 3.12.7, Terraform v1.16.5, Google Cloud CLI v588.0.0.",
+      "impact": "100% reproducible development environment confirmed ready for automated engine development.",
+      "tags": [
+        "#DevOps",
+        "#Toolchain",
+        "#Setup"
+      ]
+    },
+    {
+      "id": "evt-009",
+      "date": "2026-10-15",
+      "title": "Built Core DAG Parser & Passed 14 Automated Tests",
+      "projectId": "terra-clear",
+      "projectName": "TerraClear (Capstone)",
+      "category": "Engineering",
+      "lead": "Anthony Youssef",
+      "collaborators": [],
+      "description": "Built corpus/01-bucket-topic test scenario, implemented engine/parser.py DAG engine, established 5x5 Enterprise Risk Register (RSK-01 to RSK-08), and authored EXPLAINED.md. Executed test suite with 14/14 tests passing in 1.4s.",
+      "impact": "Completed Week 1 milestone ahead of schedule; Phase 1 marked 100% complete and Phase 2 initiated early.",
+      "tags": [
+        "#Python",
+        "#UnitTesting",
+        "#Automation",
+        "#Milestone"
+      ]
+    },
+    {
+      "id": "evt-008",
+      "date": "2026-10-15",
+      "title": "Repository Scaffold, Enterprise Guardrails & Architecture Decisions",
+      "projectId": "terra-clear",
+      "projectName": "TerraClear (Capstone)",
+      "category": "Engineering / Architecture",
+      "lead": "Anthony Youssef",
+      "collaborators": [
+        "Anthony Youssef"
+      ],
+      "description": "Initialized Git repository with modular package structure (engine, corpus, config, harness, app, tests, docs). Created 44-line security .gitignore to prevent credential leaks. Locked ADR-01 (deterministic hybrid parser + LLM justification only) and ADR-02 (external policy-driven central vs local separation) with Anthony Youssef.",
+      "impact": "Established zero-security-hallucination architectural baseline for enterprise clients.",
+      "tags": [
+        "#Architecture",
+        "#Security",
+        "#ADR",
+        "#Git"
+      ]
+    },
+    {
+      "id": "evt-010",
+      "date": "2026-10-16",
+      "title": "Completed Master Google Stakeholder & Lead Owner Matrix",
+      "projectId": "google-stakeholder-mapping",
+      "projectName": "Google Lead & Stakeholder Tracker",
+      "category": "Commercial Operations",
+      "lead": "Catherine Whitecourt",
+      "collaborators": [
+        "Catherine Whitecourt",
+        "Melek Kurudzhu"
+      ],
+      "description": "Finalized comprehensive 2026 stakeholder mapping document and Go Reply lead ownership register. Documented direct contacts for senior Google executives (SVP EMEA, CTO, VP AI) aligned with Reply business leaders.",
+      "impact": "Delivered clean, operational commercial reference tool facilitating cross-vertical account collaboration.",
+      "tags": [
+        "#Deliverable",
+        "#CommercialOps",
+        "#StakeholderManagement"
+      ]
+    }
+  ]
+};
+    let trackerData = null;
+    let activeFilter = 'all';
+
+    // Date formatting helper: "2026-10-05" -> "5<sup>th</sup> October 2026"
+    function formatDisplayDate(dateStr) {
+      if (!dateStr) return '';
+      const parts = dateStr.split('-');
+      if (parts.length !== 3) return dateStr;
+      const day = parseInt(parts[2], 10);
+      const monthIdx = parseInt(parts[1], 10) - 1;
+      const year = parts[0];
+
+      const months = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+      const monthName = months[monthIdx] || '';
+
+      let suffix = 'th';
+      if (day % 100 < 11 || day % 100 > 13) {
+        if (day % 10 === 1) suffix = 'st';
+        else if (day % 10 === 2) suffix = 'nd';
+        else if (day % 10 === 3) suffix = 'rd';
+      }
+
+      return `${day}<sup>${suffix}</sup> ${monthName} ${year}`;
+    }
+
+    // Dark Mode Controller
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        updateThemeIcon(true);
+      } else {
+        document.documentElement.classList.remove('dark');
+        updateThemeIcon(false);
+      }
+    }
+
+    function toggleDarkMode() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateThemeIcon(isDark);
+      lucide.createIcons();
+    }
+
+    function updateThemeIcon(isDark) {
+      const icon = document.getElementById('themeIcon');
+      if (!icon) return;
+      if (isDark) {
+        icon.setAttribute('data-lucide', 'sun');
+      } else {
+        icon.setAttribute('data-lucide', 'moon');
+      }
+    }
+
+    async function init() {
+      initTheme();
+      try {
+        const res = await fetch('./data/records.json');
+        if (res.ok) {
+          trackerData = await res.json();
+        }
+      } catch (err) {
+        console.log('Using embedded records data');
+      }
+      
+      if (!trackerData && typeof EMBEDDED_FALLBACK !== 'undefined') {
+        trackerData = EMBEDDED_FALLBACK;
+      }
+
+      renderAll();
+      lucide.createIcons();
+      setupMouseWheelHorizontal();
+    }
+
+    function renderAll() {
+      if (!trackerData) return;
+      document.getElementById('stat-total-events').innerText = trackerData.timeline.length;
+      
+      renderTimeline();
+      renderProjects();
+      renderCollaborators();
+      lucide.createIcons();
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.view-panel').forEach(el => el.classList.add('hidden'));
+      document.getElementById(`view-${tabId}`).classList.remove('hidden');
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-white', 'dark:bg-slate-700', 'text-slate-900', 'dark:text-white', 'shadow-xs');
+        btn.classList.add('text-slate-600', 'dark:text-slate-300');
+      });
+      const activeBtn = document.getElementById(`tab-${tabId}`);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-white', 'dark:bg-slate-700', 'text-slate-900', 'dark:text-white', 'shadow-xs');
+        activeBtn.classList.remove('text-slate-600', 'dark:text-slate-300');
+      }
+      lucide.createIcons();
+    }
+
+    function setFilter(filter) {
+      activeFilter = filter;
+      document.querySelectorAll('.filter-chip').forEach(btn => {
+        btn.classList.remove('bg-indigo-600', 'text-white');
+        btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+      });
+      const activeChip = document.getElementById(`btn-filter-${filter}`);
+      if (activeChip) {
+        activeChip.classList.add('bg-indigo-600', 'text-white');
+        activeChip.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+      }
+      filterTimeline();
+    }
+
+    function filterTimeline() {
+      const q = (document.getElementById('searchInput').value || '').toLowerCase();
+      const container = document.getElementById('horizontalTimelineContainer');
+      const items = trackerData.timeline.filter(item => {
+        const matchesFilter = activeFilter === 'all' || item.projectId === activeFilter;
+        const matchesQuery = !q ||
+          item.title.toLowerCase().includes(q) ||
+          item.description.toLowerCase().includes(q) ||
+          item.projectName.toLowerCase().includes(q) ||
+          (item.tags || []).some(t => t.toLowerCase().includes(q)) ||
+          (item.collaborators || []).some(c => c.toLowerCase().includes(q)) ||
+          (item.lead || '').toLowerCase().includes(q);
+        return matchesFilter && matchesQuery;
+      });
+
+      document.getElementById('timeline-count-badge').innerText = `Showing ${items.length} of ${trackerData.timeline.length} items`;
+      renderTimelineItems(items);
+    }
+
+    function renderTimeline() {
+      filterTimeline();
+    }
+
+    // Render left-to-right (chronological: 28 Sep -> Latest) with superscript ordinal dates
+    function renderTimelineItems(items) {
+      const container = document.getElementById('horizontalTimelineContainer');
+      container.innerHTML = '';
+
+      if (items.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 px-8 w-full text-slate-400 dark:text-slate-500">
+            <i data-lucide="inbox" class="w-10 h-10 mx-auto mb-2 opacity-50"></i>
+            <p class="text-sm">No activities matched your search criteria.</p>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      // Sort Chronological: Oldest first (28 Sep 2026) -> Latest (Right)
+      const sorted = [...items].sort((a, b) => new Date(a.date) - new Date(b.date));
+
+      sorted.forEach((item, idx) => {
+        const isTerra = item.projectId === 'terra-clear';
+        const isGoogle = item.projectId === 'google-stakeholder-mapping';
+        const isCert = item.projectId === 'certifications';
+        const isCommunity = item.projectId === 'community-events';
+        const isOnboarding = item.projectId === 'onboarding';
+        
+        let badgeColor = isTerra 
+          ? 'bg-sky-50 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 border-sky-200 dark:border-sky-800' 
+          : (isCert ? 'bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800' : 
+            (isCommunity ? 'bg-purple-50 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800' :
+            (isGoogle ? 'bg-amber-50 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700')));
+
+        let accentBorder = isTerra ? 'border-t-sky-500' : 
+          (isCert ? 'border-t-emerald-500' : 
+          (isCommunity ? 'border-t-purple-500' :
+          (isGoogle ? 'border-t-amber-500' : 'border-t-indigo-500')));
+
+        let iconName = isOnboarding ? 'flag' : (isCert ? 'award' : (isCommunity ? 'users' : (isTerra ? 'code' : 'briefcase')));
+
+        const card = document.createElement('div');
+        card.className = `min-w-[340px] sm:min-w-[380px] max-w-[380px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-all rounded-3xl p-5 shadow-xs flex flex-col justify-between shrink-0 border-t-4 ${accentBorder}`;
+        card.style.scrollSnapAlign = 'start';
+        
+        card.innerHTML = `
+          <div>
+            <!-- Step Badge & Date Header (with Superscript Ordinal Date and No-Wrap) -->
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="inline-flex items-center space-x-1 px-2.5 py-1 rounded-full text-[11px] font-bold ${badgeColor} border shrink-0">
+                <i data-lucide="${iconName}" class="w-3 h-3"></i>
+                <span class="truncate max-w-[140px]">${item.projectName}</span>
+              </span>
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 px-2.5 py-0.5 rounded-full flex items-center whitespace-nowrap shrink-0 border border-slate-200/60 dark:border-slate-700/60">
+                <i data-lucide="calendar" class="w-3 h-3 mr-1 text-slate-400"></i>
+                <span>${formatDisplayDate(item.date)}</span>
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-base font-bold text-slate-900 dark:text-white tracking-tight leading-snug mb-2">
+              ${item.title}
+            </h3>
+
+            <!-- Description -->
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+              ${item.description}
+            </p>
+
+            <!-- Impact Highlight -->
+            ${item.impact ? `
+              <div class="bg-slate-50 dark:bg-slate-800/60 rounded-xl p-3 border border-slate-100 dark:border-slate-700/60 mb-3 flex items-start space-x-2">
+                <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-500 mt-0.5 shrink-0"></i>
+                <div class="text-[11px] text-slate-700 dark:text-slate-200">
+                  <span class="font-bold text-slate-900 dark:text-white">Outcome:</span> ${item.impact}
+                </div>
+              </div>
+            ` : ''}
+          </div>
+
+          <!-- Footer Metadata -->
+          <div class="pt-3 border-t border-slate-100 dark:border-slate-800 space-y-2 mt-2">
+            <!-- Collaborators / Lead -->
+            <div class="flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
+              <span class="font-medium">Lead / Stakeholder:</span>
+              <span class="font-semibold text-slate-700 dark:text-slate-200 truncate max-w-[180px]">${item.lead || 'Eric Napoleon'}</span>
+            </div>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-1">
+              ${(item.tags || []).map(t => `
+                <span class="text-[10px] font-medium px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-md">
+                  ${t}
+                </span>
+              `).join('')}
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+      lucide.createIcons();
+    }
+
+    // Scroll helpers
+    function scrollTimeline(offset) {
+      const el = document.getElementById('horizontalTimelineContainer');
+      el.scrollBy({ left: offset, behavior: 'smooth' });
+    }
+
+    function scrollToStart() {
+      const el = document.getElementById('horizontalTimelineContainer');
+      el.scrollTo({ left: 0, behavior: 'smooth' });
+    }
+
+    function scrollToEnd() {
+      const el = document.getElementById('horizontalTimelineContainer');
+      el.scrollTo({ left: el.scrollWidth, behavior: 'smooth' });
+    }
+
+    // Support vertical mouse wheel scrolling translated to horizontal scrolling inside timeline container
+    function setupMouseWheelHorizontal() {
+      const el = document.getElementById('horizontalTimelineContainer');
+      if (!el) return;
+      el.addEventListener('wheel', (evt) => {
+        if (evt.deltaY !== 0) {
+          evt.preventDefault();
+          el.scrollLeft += evt.deltaY;
+        }
+      }, { passive: false });
+    }
+
+    function renderProjects() {
+      const container = document.getElementById('projectsContainer');
+      container.innerHTML = '';
+
+      trackerData.projects.forEach(project => {
+        const isTerra = project.id === 'terra-clear';
+        const isCert = project.id === 'certifications';
+        const isCommunity = project.id === 'community-events';
+        const isGoogle = project.id === 'google-stakeholder-mapping';
+
+        let cardBorder = isTerra ? 'border-sky-200 dark:border-sky-800' : (isCert ? 'border-emerald-200 dark:border-emerald-800' : (isCommunity ? 'border-purple-200 dark:border-purple-800' : 'border-amber-200 dark:border-amber-800'));
+        let headerBg = isTerra ? 'from-sky-50 to-indigo-50 dark:from-sky-950/40 dark:to-indigo-950/40' : (isCert ? 'from-emerald-50 to-teal-50 dark:from-emerald-950/40 dark:to-teal-950/40' : (isCommunity ? 'from-purple-50 to-indigo-50 dark:from-purple-950/40 dark:to-indigo-950/40' : 'from-amber-50 to-orange-50 dark:from-amber-950/40 dark:to-orange-950/40'));
+
+        const el = document.createElement('div');
+        el.className = `bg-white dark:bg-slate-900 rounded-3xl border ${cardBorder} shadow-xs overflow-hidden transition-colors`;
+        el.innerHTML = `
+          <div class="bg-gradient-to-r ${headerBg} p-6 sm:p-8 border-b border-slate-200/60 dark:border-slate-800">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <div class="flex items-center space-x-2 mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 shadow-2xs">
+                    ${project.category}
+                  </span>
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-bold ${project.status === 'Completed' || project.status.includes('Operational') || project.status.includes('Achieved') ? 'bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300' : 'bg-sky-100 dark:bg-sky-900/60 text-sky-800 dark:text-sky-300'}">
+                    ${project.status}
+                  </span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">${project.name}</h3>
+                <p class="text-xs text-slate-600 dark:text-slate-300 mt-1 flex items-center space-x-4">
+                  <span><strong>Timeframe:</strong> ${formatDisplayDate(project.startDate)} &rarr; ${project.targetDate}</span>
+                  ${project.lead ? `<span><strong>Lead:</strong> ${project.lead}</span>` : ''}
+                </p>
+              </div>
+
+              <div class="text-right">
+                ${project.leadEmail ? `
+                  <a href="mailto:${project.leadEmail}" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 transition shadow-2xs">
+                    <i data-lucide="mail" class="w-3.5 h-3.5 text-slate-400"></i>
+                    <span>${project.lead}</span>
+                  </a>
+                ` : ''}
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-8 space-y-6">
+            <div>
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Overview & Objectives</h4>
+              <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">${project.summary}</p>
+            </div>
+
+            <div>
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Key Accomplishments & Evidence</h4>
+              <ul class="space-y-2">
+                ${project.highlights.map(h => `
+                  <li class="flex items-start space-x-2 text-xs text-slate-700 dark:text-slate-300">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                    <span>${h}</span>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Core Competencies & Technologies</h4>
+              <div class="flex flex-wrap gap-2">
+                ${project.techStack.map(t => `
+                  <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium text-xs rounded-lg border border-slate-200/60 dark:border-slate-700">
+                    ${t}
+                  </span>
+                `).join('')}
+              </div>
+            </div>
+
+            ${project.collaborators && project.collaborators.length > 0 ? `
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Key Collaborators & Stakeholders</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  ${project.collaborators.map(c => `
+                    <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/80 dark:border-slate-700 flex items-center justify-between">
+                      <div>
+                        <div class="font-bold text-slate-900 dark:text-white text-xs">${c.name}</div>
+                        <div class="text-[11px] text-slate-500 dark:text-slate-400">${c.role}</div>
+                      </div>
+                      ${c.email ? `<a href="mailto:${c.email}" class="text-xs text-indigo-600 dark:text-indigo-400 hover:underline font-mono">${c.email}</a>` : ''}
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+          </div>
+        `;
+        container.appendChild(el);
+      });
+      lucide.createIcons();
+    }
+
+    function renderCollaborators() {
+      const container = document.getElementById('collaboratorsContainer');
+      container.innerHTML = '';
+
+      const people = [
+        {
+          name: "Anthony Youssef",
+          role: "Capstone Supervisor & Senior Cloud Mentor",
+          company: "Go Reply",
+          email: "anthony.youssef@go-reply.co.uk",
+          projects: ["TerraClear: Fixing the Last Mile of IaC"],
+          notes: "Collaborated on project scope approval, architecture decisions (ADR-01 & ADR-02), and weekly capstone milestones."
+        },
+        {
+          name: "Catherine Whitecourt",
+          role: "Commercial Lead & Partner Owner",
+          company: "Reply Group",
+          email: "c.whitecourt@reply.com",
+          projects: ["Google Stakeholders & Lead Owner Tracker"],
+          notes: "Led commercial Google executive mapping, 2025/2026 partner data consolidation, and executive meeting preparation."
+        },
+        {
+          name: "Melek Kurudzhu",
+          role: "Collaborator & Cloud Consultant",
+          company: "Go Reply",
+          email: "melek.kurudzhu@go-reply.co.uk",
+          projects: ["Google Stakeholder Tracker & Boules Bar Event"],
+          notes: "Co-collaborated on partner data cleansing, attendee reconciliation, and commercial lead ownership tracking."
+        },
+        {
+          name: "James Housden",
+          role: "Community Lead & Techie Meetup Host",
+          company: "Reply Group",
+          email: "j.housden@reply.com",
+          projects: ["Reply and Google Cloud Techie Meetup Q4"],
+          notes: "Supported as event volunteer; coordinated logistics, setup, attendee reception, and partner engagement on 8th Oct 2026."
+        },
+        {
+          name: "Vaylern Chozha Nathan",
+          role: "Google SecOps Specialist & Speaker",
+          company: "Reply Group",
+          email: "v.chozhanathan@reply.com",
+          projects: ["Agentic SOC in Action with Google SecOps"],
+          notes: "Presented advanced seminar on autonomous AI-driven Security Operations Centers and incident triage on 6th Oct 2026."
+        },
+        {
+          name: "Faris Moulay",
+          role: "Google SecOps Specialist & Speaker",
+          company: "Reply Group",
+          email: "f.moulay@reply.com",
+          projects: ["Agentic SOC in Action with Google SecOps"],
+          notes: "Co-presented technical seminar on Google SecOps, agentic threat detection, and automated investigation playbooks."
+        }
+      ];
+
+      people.forEach(p => {
+        const el = document.createElement('div');
+        el.className = 'bg-slate-50 dark:bg-slate-800/60 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 flex flex-col justify-between transition-colors';
+        el.innerHTML = `
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-slate-700 dark:text-slate-200 text-sm mb-3">
+              ${p.name.split(' ').map(n=>n[0]).join('')}
+            </div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-base">${p.name}</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">${p.role} • <span class="font-semibold text-slate-700 dark:text-slate-300">${p.company}</span></p>
+            <a href="mailto:${p.email}" class="text-xs text-indigo-600 dark:text-indigo-400 hover:underline font-mono block mt-1">${p.email}</a>
+
+            <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-700">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 block mb-1">Collaboration / Context:</span>
+              <ul class="text-xs text-slate-700 dark:text-slate-300 space-y-1">
+                ${p.projects.map(proj => `<li>• ${proj}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-4 p-2.5 bg-white dark:bg-slate-800 rounded-xl border border-slate-200/60 dark:border-slate-700 text-[11px] text-slate-600 dark:text-slate-300 italic">
+            "${p.notes}"
+          </div>
+        `;
+        container.appendChild(el);
+      });
+      lucide.createIcons();
+    }
+
+    function openAddModal() {
+      document.getElementById('addModal').classList.remove('hidden');
+      document.getElementById('form-date').value = new Date().toISOString().split('T')[0];
+      lucide.createIcons();
+    }
+
+    function closeAddModal() {
+      document.getElementById('addModal').classList.add('hidden');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const newEntry = {
+        id: `evt-${Date.now()}`,
+        date: document.getElementById('form-date').value,
+        title: document.getElementById('form-title').value,
+        projectId: document.getElementById('form-project').value,
+        projectName: document.getElementById('form-project').options[document.getElementById('form-project').selectedIndex].text,
+        lead: document.getElementById('form-people').value.split(',')[0]?.trim() || "Eric Napoleon",
+        collaborators: document.getElementById('form-people').value.split(',').map(s=>s.trim()).filter(Boolean),
+        description: document.getElementById('form-desc').value,
+        impact: document.getElementById('form-impact').value,
+        tags: document.getElementById('form-tags').value.split(',').map(s=>s.trim()).filter(Boolean)
+      };
+
+      trackerData.timeline.push(newEntry);
+      closeAddModal();
+      document.getElementById('addForm').reset();
+      renderAll();
+      scrollToEnd();
+      alert('Entry added to live view!');
+    }
+
+    window.onload = init;
+  </script>
+</body>
+</html>

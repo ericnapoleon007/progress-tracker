@@ -119,14 +119,10 @@
       <div class="flex items-center justify-between min-h-[62px] sm:min-h-[68px] py-2 sm:py-2.5">
         <!-- Brand Identity -->
         <div class="flex items-center space-x-2.5 sm:space-x-3 shrink-0">
-          <div class="relative group cursor-pointer" onclick="triggerPfpUpload()" title="Click to upload profile picture">
-            <input type="file" id="pfpInput" accept="image/*" class="hidden" onchange="handlePfpChange(event)" />
-            <div id="avatarContainer" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-rose-700 via-red-600 to-rose-950 flex items-center justify-center text-white font-bold text-sm sm:text-base shadow-sm shrink-0 overflow-hidden relative ring-2 ring-transparent group-hover:ring-rose-500 ring-rose-900/40 transition-all">
+          <div class="relative">
+            <div id="avatarContainer" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-rose-700 via-red-600 to-rose-950 flex items-center justify-center text-white font-bold text-sm sm:text-base shadow-sm shrink-0 overflow-hidden relative ring-1 ring-slate-200 dark:ring-rose-900/40">
               <span id="avatarInitials" class="hidden">EN</span>
               <img id="avatarImage" src="assets/profile.jpg" alt="Eric Napoleon" class="w-full h-full object-cover" onerror="this.classList.add('hidden'); document.getElementById('avatarInitials').classList.remove('hidden');" />
-              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity rounded-xl">
-                <i data-lucide="camera" class="w-4 h-4 text-white"></i>
-              </div>
             </div>
           </div>
           <div class="flex flex-col justify-center min-w-0">
@@ -163,19 +159,9 @@
 
         <!-- Quick Action Buttons -->
         <div class="flex items-center space-x-1.5 sm:space-x-2 no-print shrink-0">
-          <!-- Dark Mode Toggle Button -->
+          <!-- Dark Mode Toggle Button (Accessible to all visitors) -->
           <button onclick="toggleDarkMode()" id="themeToggleBtn" class="inline-flex items-center justify-center p-1.5 sm:p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition" title="Toggle Dark / Light Mode">
             <i data-lucide="moon" id="themeIcon" class="w-4 h-4"></i>
-          </button>
-
-          <button onclick="window.print()" class="hidden sm:inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200 transition">
-            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
-            <span>Print / PDF</span>
-          </button>
-
-          <button onclick="openAddModal()" class="inline-flex items-center space-x-1 sm:space-x-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold shadow-xs transition">
-            <i data-lucide="plus" class="w-3.5 h-3.5"></i>
-            <span>Add Entry</span>
           </button>
         </div>
       </div>
@@ -355,11 +341,6 @@
             <p class="text-slate-300 text-xs sm:text-sm mt-1 max-w-2xl">
               High-impact synthesized summary designed for fast executive check-ins with Anthony Youssef and Go Reply leadership.
             </p>
-          </div>
-          <button onclick="window.print()" class="no-print self-start md:self-auto px-3.5 sm:px-4 py-2 sm:py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-xl text-xs font-bold text-white border border-white/20 transition flex items-center space-x-2">
-            <i data-lucide="printer" class="w-4 h-4"></i>
-            <span>Export Briefing Sheet</span>
-          </button>
         </div>
       </div>
 
@@ -467,69 +448,6 @@
     </section>
 
   </main>
-
-  <!-- Add Entry Modal -->
-  <div id="addModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 hidden">
-    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-100 dark:border-slate-800 max-h-[90vh] overflow-y-auto">
-      <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
-        <div>
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Add New Career Record</h3>
-          <p class="text-xs text-slate-500 dark:text-slate-400">Log an event, deliverable, or milestone</p>
-        </div>
-        <button onclick="closeAddModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1">
-          <i data-lucide="x" class="w-5 h-5"></i>
-        </button>
-      </div>
-
-      <form id="addForm" onsubmit="handleFormSubmit(event)" class="space-y-4 text-xs">
-        <div>
-          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Date</label>
-          <input type="date" id="form-date" required class="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-rose-500 focus:outline-none">
-        </div>
-        <div>
-          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Title / Headline</label>
-          <input type="text" id="form-title" placeholder="e.g. Passed certification / Shipped feature..." required class="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-rose-500 focus:outline-none">
-        </div>
-        <div>
-          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Project / Track</label>
-          <select id="form-project" class="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-rose-500 focus:outline-none">
-            <option value="terra-clear">TerraClear (Capstone)</option>
-            <option value="certifications">Certifications & Accreditations</option>
-            <option value="google-stakeholder-mapping">Google Stakeholder & Lead Tracker</option>
-            <option value="community-events">Community Meetups & Seminars</option>
-            <option value="onboarding">Onboarding / Enablement</option>
-            <option value="other">Other Initiative</option>
-          </select>
-        </div>
-        <div>
-          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Lead / Collaborators</label>
-          <input type="text" id="form-people" placeholder="e.g. Anthony Youssef, James Housden..." class="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-rose-500 focus:outline-none">
-        </div>
-        <div>
-          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Description & Context</label>
-          <textarea id="form-desc" rows="3" placeholder="What problem did you solve? What did you build?" required class="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-rose-500 focus:outline-none"></textarea>
-        </div>
-        <div>
-          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Quantifiable Impact & Deliverables</label>
-          <textarea id="form-impact" rows="2" placeholder="e.g. Official credential, 14 passing unit tests, delivered master sheet..." class="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-rose-500 focus:outline-none"></textarea>
-        </div>
-        <div>
-          <label class="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Tags (comma-separated)</label>
-          <input type="text" id="form-tags" placeholder="#Certification, #GoogleCloud, #GenAI, #Terraform" class="w-full px-3 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-xl focus:ring-2 focus:ring-rose-500 focus:outline-none">
-        </div>
-
-        <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-end space-x-2">
-          <button type="button" onclick="closeAddModal()" class="px-4 py-2 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-600 dark:text-slate-300 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition">
-            Cancel
-          </button>
-          <button type="submit" class="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white font-semibold rounded-xl shadow-xs transition">
-            Add to Live View
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-
   <!-- JavaScript Logic with Embedded JSON Fallback -->
   <script>
     const EMBEDDED_FALLBACK = {
@@ -1028,12 +946,7 @@
       }
     }
 
-    // Profile Picture (PFP) Upload & Persistence
-    function triggerPfpUpload() {
-      const input = document.getElementById('pfpInput');
-      if (input) input.click();
-    }
-
+    // Profile Picture Display & Fallback
     function handleAvatarLoad(img) {
       img.classList.remove('hidden');
       const initials = document.getElementById('avatarInitials');
@@ -1066,49 +979,6 @@
         img.classList.remove('hidden');
         initials.classList.add('hidden');
       }
-    }
-
-    function handlePfpChange(e) {
-      const file = e.target.files && e.target.files[0];
-      if (!file) return;
-
-      const reader = new FileReader();
-      reader.onload = function(evt) {
-        const rawData = evt.target.result;
-        // Optimize & resize image using canvas to ensure it fits well within localStorage limits
-        const img = new Image();
-        img.onload = function() {
-          const maxDim = 256;
-          let width = img.width;
-          let height = img.height;
-          if (width > height) {
-            if (width > maxDim) {
-              height = Math.round((height * maxDim) / width);
-              width = maxDim;
-            }
-          } else {
-            if (height > maxDim) {
-              width = Math.round((width * maxDim) / height);
-              height = maxDim;
-            }
-          }
-          const canvas = document.createElement('canvas');
-          canvas.width = width;
-          canvas.height = height;
-          const ctx = canvas.getContext('2d');
-          ctx.drawImage(img, 0, 0, width, height);
-          const optimizedDataUrl = canvas.toDataURL('image/jpeg', 0.85);
-
-          try {
-            localStorage.setItem('userPfp', optimizedDataUrl);
-          } catch (err) {
-            console.warn('Could not save to localStorage:', err);
-          }
-          setAvatarImage(optimizedDataUrl);
-        };
-        img.src = rawData;
-      };
-      reader.readAsDataURL(file);
     }
 
     async function init() {
@@ -1543,39 +1413,6 @@
         container.appendChild(el);
       });
       lucide.createIcons();
-    }
-
-    function openAddModal() {
-      document.getElementById('addModal').classList.remove('hidden');
-      document.getElementById('form-date').value = new Date().toISOString().split('T')[0];
-      lucide.createIcons();
-    }
-
-    function closeAddModal() {
-      document.getElementById('addModal').classList.add('hidden');
-    }
-
-    function handleFormSubmit(e) {
-      e.preventDefault();
-      const newEntry = {
-        id: `evt-${Date.now()}`,
-        date: document.getElementById('form-date').value,
-        title: document.getElementById('form-title').value,
-        projectId: document.getElementById('form-project').value,
-        projectName: document.getElementById('form-project').options[document.getElementById('form-project').selectedIndex].text,
-        lead: document.getElementById('form-people').value.split(',')[0]?.trim() || "Eric Napoleon",
-        collaborators: document.getElementById('form-people').value.split(',').map(s=>s.trim()).filter(Boolean),
-        description: document.getElementById('form-desc').value,
-        impact: document.getElementById('form-impact').value,
-        tags: document.getElementById('form-tags').value.split(',').map(s=>s.trim()).filter(Boolean)
-      };
-
-      trackerData.timeline.push(newEntry);
-      closeAddModal();
-      document.getElementById('addForm').reset();
-      renderAll();
-      scrollToEnd();
-      alert('Entry added to live view!');
     }
 
     window.onload = init;

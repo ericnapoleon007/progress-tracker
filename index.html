@@ -84,7 +84,7 @@
             <input type="file" id="pfpInput" accept="image/*" class="hidden" onchange="handlePfpChange(event)" />
             <div id="avatarContainer" class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center text-white font-bold text-base shadow-sm shrink-0 overflow-hidden relative ring-2 ring-transparent group-hover:ring-indigo-500 transition-all">
               <span id="avatarInitials">EN</span>
-              <img id="avatarImage" src="" alt="Profile" class="w-full h-full object-cover hidden" />
+              <img id="avatarImage" src="assets/profile.jpg" alt="Profile" class="w-full h-full object-cover hidden" onerror="handleAvatarError(this)" onload="handleAvatarLoad(this)" />
               <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity rounded-xl">
                 <i data-lucide="camera" class="w-4 h-4 text-white"></i>
               </div>
@@ -961,6 +961,23 @@
     function triggerPfpUpload() {
       const input = document.getElementById('pfpInput');
       if (input) input.click();
+    }
+
+    function handleAvatarLoad(img) {
+      img.classList.remove('hidden');
+      const initials = document.getElementById('avatarInitials');
+      if (initials) initials.classList.add('hidden');
+    }
+
+    function handleAvatarError(img) {
+      const savedPfp = localStorage.getItem('userPfp');
+      if (savedPfp && img.src !== savedPfp) {
+        setAvatarImage(savedPfp);
+        return;
+      }
+      img.classList.add('hidden');
+      const initials = document.getElementById('avatarInitials');
+      if (initials) initials.classList.remove('hidden');
     }
 
     function initPfp() {

@@ -1,7 +1,7 @@
 # Career & Progress Log — Eric Napoleon
 
 **Company:** Go Reply (Reply Group)  
-**Role:** Graduate Consultant / Cloud Engineer (Cohort 2026)  
+**Role:** Cloud Consultant  
 **Start Date:** 28 September 2026  
 **Last Updated:** 19 October 2026  
 **Interactive Dashboard:** Open [`index.html`](file:///Users/ericnapoleon/Downloads/progress%20tracker/index.html) in your browser.

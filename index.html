@@ -53,7 +53,7 @@
     .horizontal-scroll {
       scrollbar-width: thin;
       scrollbar-color: #cbd5e1 #f1f5f9;
-      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
     }
     .dark .horizontal-scroll {
       scrollbar-color: #9f1239 #220f16;
@@ -94,12 +94,6 @@
     .no-scrollbar {
       -ms-overflow-style: none;
       scrollbar-width: none;
-    }
-
-    @media (min-width: 768px) {
-      .horizontal-scroll {
-        scroll-snap-type: x mandatory;
-      }
     }
 
     @media print {
@@ -1256,22 +1250,19 @@
 
         const card = document.createElement('div');
         card.className = `w-full max-w-full md:w-auto md:min-w-[360px] md:max-w-[380px] md:shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-all rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-xs flex flex-col justify-between border-t-4 ${accentBorder}`;
-        if (window.innerWidth >= 768) {
-          card.style.scrollSnapAlign = 'start';
-        }
         
         card.innerHTML = `
           <div>
-            <!-- Step Badge & Date Header (Stack on mobile so date is below, inline on desktop) -->
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+            <!-- Step Badge & Date Header (Track badge on top, Date badge cleanly below to prevent overflow) -->
+            <div class="flex flex-col gap-2 mb-3">
               <div class="flex items-center">
-                <span class="inline-flex items-center space-x-1 px-2.5 py-1 rounded-full text-[11px] font-bold ${badgeColor} border max-w-full">
+                <span class="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold ${badgeColor} border max-w-full">
                   <i data-lucide="${iconName}" class="w-3 h-3 shrink-0"></i>
                   <span class="truncate">${item.projectName}</span>
                 </span>
               </div>
               <div class="flex items-center">
-                <span class="text-[11px] sm:text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 px-2.5 py-0.5 rounded-full flex items-center whitespace-nowrap border border-slate-200/60 dark:border-slate-700/60">
+                <span class="text-[11px] sm:text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 px-2.5 py-0.5 rounded-full inline-flex items-center whitespace-nowrap border border-slate-200/60 dark:border-slate-700/60">
                   <i data-lucide="calendar" class="w-3 h-3 mr-1 text-slate-400 shrink-0"></i>
                   <span>${formatDisplayDate(item.date)}</span>
                 </span>
@@ -1352,12 +1343,21 @@
       }
     }
 
-    // Support vertical mouse wheel scrolling translated to horizontal scrolling on desktop only
+    // Support buttery smooth trackpad and mouse wheel scrolling
     function setupMouseWheelHorizontal() {
       const el = document.getElementById('horizontalTimelineContainer');
       if (!el) return;
       el.addEventListener('wheel', (evt) => {
-        if (window.innerWidth >= 768 && evt.deltaY !== 0) {
+        if (window.innerWidth < 768) return;
+
+        // If the user is swiping horizontally with a trackpad (|deltaX| > 0),
+        // let the browser handle it completely natively with hardware-accelerated momentum!
+        if (Math.abs(evt.deltaX) > 0) {
+          return;
+        }
+
+        // Only translate pure vertical mouse wheel scrolls (traditional desktop mouse wheel)
+        if (evt.deltaY !== 0) {
           evt.preventDefault();
           el.scrollLeft += evt.deltaY;
         }

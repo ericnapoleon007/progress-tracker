@@ -79,7 +79,7 @@
 * **Category:** Commercial Operations & Partner Event Outreach
 * **Lead Owner:** Catherine Whitecourt (`c.whitecourt@reply.com`)
 * **Core Collaborator:** Melek Kurudzhu (`melek.kurudzhu@go-reply.co.uk`)
-* **Timeframe:** September 2026 – October 2026
+* **Timeframe:** October 2026
 * **Status:** Completed / Delivered & Operational
 * **Core Problem:** Disparate, conflicting spreadsheets across Reply verticals for Google account executives, partner relations, and event attendance, causing communication overlap and unassigned accounts.
 * **Major Deliverables:**
@@ -95,8 +95,6 @@
 | Date | Track / Project | Activity / Milestone | Key People | Impact / Deliverable |
 |---|---|---|---|---|
 | **28 Sep 2026** | Onboarding | Joined Go Reply Graduate Program | 2026 Grads | Officially commenced employment under Grads 2026. |
-| **29 Sep 2026** | Google Tracker | Initiated Stakeholder Reconciliation | Catherine Whitecourt, Melek Kurudzhu | Audited legacy contact lists; identified data gaps. |
-| **30 Sep 2026** | Google Tracker | Delivered Boules Bar Invitation Matrix | Catherine Whitecourt, Melek Kurudzhu | Real-time RSVP and lead ownership tracking active. |
 | **05 Oct 2026** | Certifications | Passed Google Cloud Certified - Cloud Digital Leader | Google Cloud | Earned foundational Google Cloud credential. |
 | **06 Oct 2026** | Seminars | Attended Agentic SOC in Action with Google SecOps | Vaylern Chozha Nathan, Faris Moulay | Technical CPD in SecOps and autonomous AI agents. |
 | **07 Oct 2026** | TerraClear | Initial Capstone Ideation Meeting | Anthony Youssef | Shortlisted candidate infrastructure topics. |
@@ -109,6 +107,8 @@
 | **15 Oct 2026** | TerraClear | Repo Scaffold & Security Guardrails | Self | 44-line `.gitignore`, 10 pinned requirements. |
 | **15 Oct 2026** | TerraClear | Architecture Decisions Locked (ADR-01/02) | Anthony Youssef | Approved deterministic hybrid model. |
 | **15 Oct 2026** | TerraClear | Built Core DAG Parser (14 Passing Tests) | Self | `engine/parser.py` tested; Week 1 100% complete. |
+| **16 Oct 2026** | Google Tracker | Commenced Stakeholder Reconciliation | Catherine Whitecourt, Melek Kurudzhu | Audited legacy contact lists; identified data gaps. |
+| **16 Oct 2026** | Google Tracker | Delivered Boules Bar Invitation Matrix | Catherine Whitecourt, Melek Kurudzhu | Real-time RSVP and lead ownership tracking active. |
 | **16 Oct 2026** | Google Tracker | Finalized Master 2026 Stakeholder Matrix | Catherine Whitecourt, Melek Kurudzhu | Delivered complete Google contact & lead ledger. |
 
 ---

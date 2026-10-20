@@ -11,7 +11,7 @@
 ## Executive Summary & Key Milestones
 
 - **Start Date:** **28 September 2026** (Go Reply Grads 2026)
-- **Total Logged Activities:** 18 major milestones, deliverables, and events
+- **Total Logged Activities:** 19 major milestones, deliverables, and events
 - **Official Google Cloud Certifications:**
   - **Google Cloud Certified - Cloud Digital Leader** (Achieved 05 Oct 2026)
   - **Google Cloud Certified - Generative AI Leader** (Achieved 09 Oct 2026)
@@ -28,8 +28,9 @@
   5. **Company Induction & Global Training** (Professional Enablement)
 - **Key Supervisors & Collaborators:**
   - **Anthony Youssef** (`anthony.youssef@go-reply.co.uk`) — Capstone Supervisor & Senior Mentor
-  - **Catherine Whitecourt** (`c.whitecourt@reply.com`) — Commercial Lead, Google Partner Mapping
+  - **Catherine Whitecourt** (`c.whitecourt@reply.com`) — Commercial Lead, Google Partner Mapping & Co-Selling
   - **Melek Kurudzhu** (`melek.kurudzhu@go-reply.co.uk`) — Commercial Operations & Event Reconciliation
+  - **Richard Maxwell** (`r.maxwell@reply.com`) — Commercial Lead, Gemini Enterprise & GECX Activation
   - **James Housden** (`j.housden@reply.com`) — Community Lead & Host, Techie Meetup Q4
   - **Vaylern Chozha Nathan** (`v.chozhanathan@reply.com`) — Presenter, Agentic SOC with Google SecOps
   - **Faris Moulay** (`f.moulay@reply.com`) — Presenter, Agentic SOC with Google SecOps
@@ -79,7 +80,7 @@
 ### Track 4: Google Stakeholder & Commercial Lead Owner Tracker
 * **Category:** Commercial Operations & Partner Event Outreach
 * **Lead Owner:** Catherine Whitecourt (`c.whitecourt@reply.com`)
-* **Core Collaborator:** Melek Kurudzhu (`melek.kurudzhu@go-reply.co.uk`)
+* **Core Collaborators:** Melek Kurudzhu (`melek.kurudzhu@go-reply.co.uk`), Richard Maxwell (`r.maxwell@reply.com`)
 * **Timeframe:** October 2026
 * **Status:** Completed / Delivered & Operational
 * **Core Problem:** Disparate, conflicting spreadsheets across Reply verticals for Google account executives, partner relations, and event attendance, causing communication overlap and unassigned accounts.
@@ -88,6 +89,7 @@
   - Mapped individual Google executives (SVP EMEA, Global Engineering, AI Leads) to Reply Sales Leads and Holding executives.
   - Built operational tracker (`Googlers - Go Reply lead owners`) tracking outreach, response statuses, and meeting actions.
   - Coordinated invitation tracking and RSVP lists for targeted partner networking sessions (e.g. Boules Bar Googlers event, IBSL contacts).
+  - Standardized, formatted, and finalized the executive **Go Reply Growth Challenge Cheat Sheet** co-sell deck (`Google Go Reply Cheat sheet.pptx`) aligning typography, solution frameworks, and Google funding mechanisms (GET/DAF with pilot tiers from $60k to $250k).
 
 ---
 
@@ -126,6 +128,7 @@
 | **20 Oct 2026** | Enablement | Completed Go Reply Global Training: Project Management | Go Reply Training | Mastered project lifecycles, milestone governance, and consulting delivery frameworks (Passed Quiz). |
 | **20 Oct 2026** | Enablement | Completed Go Reply Global Training: Consulting 101 | Go Reply Training | Mastered consulting frameworks, structured problem solving, and client delivery standards (Passed Quiz). |
 | **20 Oct 2026** | Enablement | Completed Go Reply Global Training: Business Change | Go Reply Training | Mastered organizational change management, stakeholder impact analysis, and transformation frameworks (Passed Quiz). |
+| **20 Oct 2026** | Google Tracker | Finalized Growth Challenge Commercial Co-Sell Deck | Catherine Whitecourt, Richard Maxwell | Executive-ready deck for Gemini Enterprise, GECX, and Google funding mechanisms. |
 
 ---
 
@@ -136,6 +139,7 @@ When meeting with your supervisor or manager:
    - Joined 28 Sep 2026 & achieved **2 Google Cloud Certifications** (Cloud Digital Leader + Generative AI Leader) + **3 Gemini Enterprise Labs** within 3 weeks.
    - **TerraClear Week 1 100% complete** ahead of schedule; Phase 2 DAG parser built with **14 passing automated tests**.
    - **Master Google stakeholder matrix delivered** to Catherine Whitecourt and Melek Kurudzhu.
+   - Finalized **Go Reply Growth Challenge Commercial Co-Sell Deck** with Catherine Whitecourt & Richard Maxwell (20 Oct 2026).
    - Completed **3x Go Reply Global Training Modules & Passed Quizzes** (Project Management, Consulting 101, Business Change on 20 Oct 2026).
    - Volunteered at **Reply & Google Cloud Techie Meetup Q4** with James Housden.
 2. **Current Sprint (Week 2):**

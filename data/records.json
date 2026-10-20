@@ -61,23 +61,30 @@
           "name": "Melek Kurudzhu",
           "email": "melek.kurudzhu@go-reply.co.uk",
           "role": "Core Collaborator"
+        },
+        {
+          "name": "Richard Maxwell",
+          "email": "r.maxwell@reply.com",
+          "role": "Commercial Lead / Activation"
         }
       ],
       "startDate": "2026-10-16",
-      "targetDate": "2026-10-16",
-      "summary": "Designed, cleaned, and reconciled master stakeholder matrices mapping Google accounts and executives to Go Reply commercial lead owners. Facilitated targeted account engagement, partner outreach tracking, and executive meeting preparation across Reply verticals.",
+      "targetDate": "2026-10-20",
+      "summary": "Designed, cleaned, and reconciled master stakeholder matrices mapping Google accounts and executives to Go Reply commercial lead owners. Facilitated targeted account engagement, partner outreach tracking, and executive pitch decks across Reply verticals.",
       "techStack": [
         "Advanced Excel Modeling",
         "Data Reconciliation & Deduplication",
         "Stakeholder Mapping",
         "Commercial Operations",
-        "Pipeline & Event Tracking"
+        "Pipeline & Event Tracking",
+        "Pitch Decks & Co-Sell Enablement"
       ],
       "highlights": [
         "Consolidated disparate 2025 Google contact lists into an updated 2026 unified master database.",
         "Mapped key Google executives (SVP EMEA, Global Engineering, AI Leads) to dedicated Reply Sales and Executive owners (e.g., Reply Holding, Go Reply).",
         "Structured the 'Googlers - Go Reply Lead Owners' operational tracker for outreach logging, response tracking, and follow-ups.",
-        "Managed guest invitation tracking and attendance lists for targeted partner events (including Boules Bar Googlers Oct 2026)."
+        "Managed guest invitation tracking and attendance lists for targeted partner events (including Boules Bar Googlers Oct 2026).",
+        "Standardized and finalized the executive Go Reply Growth Challenge commercial co-sell pitch deck for Gemini Enterprise, GECX, and Google Funding options (20 Oct 2026)."
       ]
     },
     {
@@ -530,6 +537,29 @@
         "#ChangeManagement",
         "#GoReply",
         "#Transformation"
+      ]
+    },
+    {
+      "id": "evt-019",
+      "date": "2026-10-20",
+      "title": "Finalized Go Reply Growth Challenge Commercial Cheat Sheet & Co-Sell Deck",
+      "projectId": "google-stakeholder-mapping",
+      "projectName": "Google Lead & Stakeholder Tracker",
+      "category": "Commercial Operations",
+      "lead": "Catherine Whitecourt",
+      "collaborators": [
+        "Catherine Whitecourt",
+        "Richard Maxwell"
+      ],
+      "description": "Standardized, formatted, and finalized the executive Go Reply Growth Challenge Cheat Sheet presentation (Google Go Reply Cheat sheet.pptx) used for commercial co-selling with Google. Aligned slide typography, visual hierarchy, and messaging across key go-to-market pillars—including Selling Gemini Enterprise, Driving Gemini Consumption & Agents, Winning GECX Clients, Industry Reference Operating Models (Hospitality/Retail), and Google Funding Options (GET and DAF co-investment mechanisms with pilot budgets ranging from $60k to $250k).",
+      "impact": "Delivered a consistent, high-impact commercial pitch and enablement deck for Go Reply sales leads and Google partner teams to rapidly respond to client opportunities and activate co-sell pipeline.",
+      "tags": [
+        "#CommercialOps",
+        "#GeminiEnterprise",
+        "#GECX",
+        "#GoogleFunding",
+        "#PitchDeck",
+        "#Enablement"
       ]
     }
   ]

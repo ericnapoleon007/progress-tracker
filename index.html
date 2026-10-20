@@ -1086,7 +1086,7 @@
       initTheme();
       initPfp();
       try {
-        const res = await fetch('./data/records.json');
+        const res = await fetch('./data/records.json?v=' + Date.now(), { cache: 'no-store' });
         if (res.ok) {
           trackerData = await res.json();
         }

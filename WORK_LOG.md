@@ -96,9 +96,9 @@
 * **Lead / Practice:** Go Reply Leadership & Training Practice
 * **Key Achievements:**
   - **28 Sep 2026:** Joined Go Reply 2026 Graduate Program; completed workplace setup, tooling, and practice orientation.
-  - **20 Oct 2026:** Completed the **Go Reply Global Training: Project Management** curriculum (hosted on Reply Global Training shared drive), mastering consulting delivery lifecycles, milestone control, stakeholder alignment, and risk management standards.
-  - **20 Oct 2026:** Completed the **Go Reply Global Training: Consulting 101** curriculum, developing structured problem-solving, hypothesis-driven consulting, client communication, and professional advisory standards.
-  - **20 Oct 2026:** Completed the **Go Reply Global Training: Business Change** curriculum, mastering change management principles, stakeholder impact analysis, transition governance, and organizational adoption strategies.
+  - **20 Oct 2026:** Completed the **Go Reply Global Training: Project Management** curriculum (hosted on Reply Global Training shared drive) and passed the follow-up assessment quiz, mastering consulting delivery lifecycles, milestone control, stakeholder alignment, and risk management standards.
+  - **20 Oct 2026:** Completed the **Go Reply Global Training: Consulting 101** curriculum and passed the follow-up assessment quiz, developing structured problem-solving, hypothesis-driven consulting, client communication, and professional advisory standards.
+  - **20 Oct 2026:** Completed the **Go Reply Global Training: Business Change** curriculum and passed the follow-up assessment quiz, mastering change management principles, stakeholder impact analysis, transition governance, and organizational adoption strategies.
 * **Impact:** Standardized project management governance, core consulting methodologies, and business change frameworks directly applicable to client delivery and the 2026 Capstone platform.
 
 ---
@@ -123,9 +123,9 @@
 | **16 Oct 2026** | Google Tracker | Commenced Stakeholder Reconciliation | Catherine Whitecourt, Melek Kurudzhu | Audited legacy contact lists; identified data gaps. |
 | **16 Oct 2026** | Google Tracker | Delivered Boules Bar Invitation Matrix | Catherine Whitecourt, Melek Kurudzhu | Real-time RSVP and lead ownership tracking active. |
 | **16 Oct 2026** | Google Tracker | Finalized Master 2026 Stakeholder Matrix | Catherine Whitecourt, Melek Kurudzhu | Delivered complete Google contact & lead ledger. |
-| **20 Oct 2026** | Enablement | Completed Go Reply Global Training: Project Management | Go Reply Training | Mastered project lifecycles, milestone governance, and consulting delivery frameworks. |
-| **20 Oct 2026** | Enablement | Completed Go Reply Global Training: Consulting 101 | Go Reply Training | Mastered consulting frameworks, structured problem solving, and client delivery standards. |
-| **20 Oct 2026** | Enablement | Completed Go Reply Global Training: Business Change | Go Reply Training | Mastered organizational change management, stakeholder impact analysis, and transformation frameworks. |
+| **20 Oct 2026** | Enablement | Completed Go Reply Global Training: Project Management | Go Reply Training | Mastered project lifecycles, milestone governance, and consulting delivery frameworks (Passed Quiz). |
+| **20 Oct 2026** | Enablement | Completed Go Reply Global Training: Consulting 101 | Go Reply Training | Mastered consulting frameworks, structured problem solving, and client delivery standards (Passed Quiz). |
+| **20 Oct 2026** | Enablement | Completed Go Reply Global Training: Business Change | Go Reply Training | Mastered organizational change management, stakeholder impact analysis, and transformation frameworks (Passed Quiz). |
 
 ---
 
@@ -136,7 +136,7 @@ When meeting with your supervisor or manager:
    - Joined 28 Sep 2026 & achieved **2 Google Cloud Certifications** (Cloud Digital Leader + Generative AI Leader) + **3 Gemini Enterprise Labs** within 3 weeks.
    - **TerraClear Week 1 100% complete** ahead of schedule; Phase 2 DAG parser built with **14 passing automated tests**.
    - **Master Google stakeholder matrix delivered** to Catherine Whitecourt and Melek Kurudzhu.
-   - Completed **3x Go Reply Global Training Modules** (Project Management, Consulting 101, Business Change on 20 Oct 2026).
+   - Completed **3x Go Reply Global Training Modules & Passed Quizzes** (Project Management, Consulting 101, Business Change on 20 Oct 2026).
    - Volunteered at **Reply & Google Cloud Techie Meetup Q4** with James Housden.
 2. **Current Sprint (Week 2):**
    - Multi-resource test corpus (`01-bucket-topic`) and Plan Reader DAG refinements.

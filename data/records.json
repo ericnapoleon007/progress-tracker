@@ -144,6 +144,36 @@
         "Volunteered to set up and manage the Reply & Google Cloud Techie Meetup Q4 alongside James Housden (08 Oct 2026).",
         "Participated in deep-dive technical seminar 'Agentic SOC in Action with Google SecOps' hosted by Vaylern Chozha Nathan and Faris Moulay (06 Oct 2026)."
       ]
+    },
+    {
+      "id": "onboarding",
+      "name": "Go Reply Graduate Induction & Global Enablement",
+      "shortName": "Induction & Global Enablement",
+      "category": "Company Onboarding & Professional Enablement",
+      "status": "In Progress / Active",
+      "lead": "Go Reply Leadership & Training Practice",
+      "leadEmail": "",
+      "collaborators": [
+        {
+          "name": "2026 Graduate Cohort",
+          "email": "",
+          "role": "Peer Graduates"
+        }
+      ],
+      "startDate": "2026-09-28",
+      "targetDate": "Ongoing",
+      "summary": "Foundational graduate curriculum encompassing Reply Group corporate practices, consulting delivery standards, technical tools setup, and formal global training programs hosted across Reply shared drives.",
+      "techStack": [
+        "Project Management Lifecycle",
+        "Consulting Governance",
+        "Reply Standards & Methodologies",
+        "Risk & Milestone Control",
+        "Executive Reporting"
+      ],
+      "highlights": [
+        "Commenced Go Reply employment under the 2026 Graduate Program (28 Sep 2026).",
+        "Completed the Go Reply Global Training: Project Management module (20 Oct 2026), mastering delivery lifecycles, milestone control, and consulting governance."
+      ]
     }
   ],
   "timeline": [
@@ -433,6 +463,27 @@
         "#Deliverable",
         "#CommercialOps",
         "#StakeholderManagement"
+      ]
+    },
+    {
+      "id": "evt-016",
+      "date": "2026-10-20",
+      "title": "Completed Go Reply Global Training: Project Management",
+      "projectId": "onboarding",
+      "projectName": "Internal Enablement & Global Training",
+      "category": "Professional Enablement",
+      "lead": "Go Reply Global Training",
+      "collaborators": [
+        "Go Reply Enablement Team"
+      ],
+      "description": "Completed the comprehensive Go Reply Global Training module on Project Management from the Reply shared drive. Covered end-to-end consulting delivery lifecycles, project governance, scope and milestone tracking, risk registers, and executive client reporting standards.",
+      "impact": "Mastered standard Reply Group project delivery frameworks and consulting governance to apply across client engagements and the 2026 Capstone project.",
+      "tags": [
+        "#Training",
+        "#ProjectManagement",
+        "#GoReply",
+        "#GlobalTraining",
+        "#Enablement"
       ]
     }
   ]

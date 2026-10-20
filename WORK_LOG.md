@@ -3,7 +3,7 @@
 **Company:** Go Reply (Reply Group)  
 **Role:** Cloud Consultant  
 **Start Date:** 28 September 2026  
-**Last Updated:** 19 October 2026  
+**Last Updated:** 20 October 2026  
 **Interactive Dashboard:** Open [`index.html`](file:///Users/ericnapoleon/Downloads/progress%20tracker/index.html) in your browser.
 
 ---
@@ -11,7 +11,7 @@
 ## Executive Summary & Key Milestones
 
 - **Start Date:** **28 September 2026** (Go Reply Grads 2026)
-- **Total Logged Activities:** 15 major milestones, deliverables, and events
+- **Total Logged Activities:** 16 major milestones, deliverables, and events
 - **Official Google Cloud Certifications:**
   - **Google Cloud Certified - Cloud Digital Leader** (Achieved 05 Oct 2026)
   - **Google Cloud Certified - Generative AI Leader** (Achieved 09 Oct 2026)
@@ -25,6 +25,7 @@
   2. **Google Stakeholder & Commercial Lead Owner Tracker** (Commercial Operations)
   3. **Google Cloud Certifications & Accreditations** (Technical Enablement)
   4. **Community Meetups & Seminars** (Partner Citizenship & CPD)
+  5. **Company Induction & Global Training** (Professional Enablement)
 - **Key Supervisors & Collaborators:**
   - **Anthony Youssef** (`anthony.youssef@go-reply.co.uk`) — Capstone Supervisor & Senior Mentor
   - **Catherine Whitecourt** (`c.whitecourt@reply.com`) — Commercial Lead, Google Partner Mapping
@@ -90,6 +91,16 @@
 
 ---
 
+### Track 5: Company Induction & Global Training
+* **Category:** Professional Enablement & Internal Governance
+* **Lead / Practice:** Go Reply Leadership & Training Practice
+* **Key Achievements:**
+  - **28 Sep 2026:** Joined Go Reply 2026 Graduate Program; completed workplace setup, tooling, and practice orientation.
+  - **20 Oct 2026:** Completed the **Go Reply Global Training: Project Management** curriculum (hosted on Reply Global Training shared drive), mastering consulting delivery lifecycles, milestone control, stakeholder alignment, and risk management standards.
+* **Impact:** Standardized project management governance directly applicable to client delivery and the 2026 Capstone platform.
+
+---
+
 ## 2. Master Chronological Activity Log (28 Sep 2026 &rarr; Present)
 
 | Date | Track / Project | Activity / Milestone | Key People | Impact / Deliverable |
@@ -110,6 +121,7 @@
 | **16 Oct 2026** | Google Tracker | Commenced Stakeholder Reconciliation | Catherine Whitecourt, Melek Kurudzhu | Audited legacy contact lists; identified data gaps. |
 | **16 Oct 2026** | Google Tracker | Delivered Boules Bar Invitation Matrix | Catherine Whitecourt, Melek Kurudzhu | Real-time RSVP and lead ownership tracking active. |
 | **16 Oct 2026** | Google Tracker | Finalized Master 2026 Stakeholder Matrix | Catherine Whitecourt, Melek Kurudzhu | Delivered complete Google contact & lead ledger. |
+| **20 Oct 2026** | Enablement | Completed Go Reply Global Training: Project Management | Go Reply Training | Mastered project lifecycles, milestone governance, and consulting delivery frameworks. |
 
 ---
 
@@ -120,6 +132,7 @@ When meeting with your supervisor or manager:
    - Joined 28 Sep 2026 & achieved **2 Google Cloud Certifications** (Cloud Digital Leader + Generative AI Leader) + **3 Gemini Enterprise Labs** within 3 weeks.
    - **TerraClear Week 1 100% complete** ahead of schedule; Phase 2 DAG parser built with **14 passing automated tests**.
    - **Master Google stakeholder matrix delivered** to Catherine Whitecourt and Melek Kurudzhu.
+   - Completed **Go Reply Global Training: Project Management** (20 Oct 2026).
    - Volunteered at **Reply & Google Cloud Techie Meetup Q4** with James Housden.
 2. **Current Sprint (Week 2):**
    - Multi-resource test corpus (`01-bucket-topic`) and Plan Reader DAG refinements.

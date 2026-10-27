@@ -101,7 +101,8 @@
   - **21 Oct 2026:** Completed the **Go Reply Global Training: Project Management** curriculum (hosted on Reply Global Training shared drive) and passed the follow-up assessment quiz, mastering consulting delivery lifecycles, milestone control, stakeholder alignment, and risk management standards.
   - **21 Oct 2026:** Completed the **Go Reply Global Training: Consulting 101** curriculum and passed the follow-up assessment quiz, developing structured problem-solving, hypothesis-driven consulting, client communication, and professional advisory standards.
   - **21 Oct 2026:** Completed the **Go Reply Global Training: Business Change** curriculum and passed the follow-up assessment quiz, mastering change management principles, stakeholder impact analysis, transition governance, and organizational adoption strategies.
-* **Impact:** Standardized project management governance, core consulting methodologies, and business change frameworks directly applicable to client delivery and the 2026 Capstone platform.
+  - **27 Oct 2026:** Attended the full-day **AI Enabled Software Engineering Training Day** at the QA offices in London, organized by Tristan Warren (`tr.warren@reply.com`). Covered practical AI-augmented software development, prompt design for code generation, developer LLM toolchains, and AI-assisted testing and refactoring.
+* **Impact:** Standardized project management governance, core consulting methodologies, and modern AI engineering practices directly applicable to client delivery and the 2026 Capstone platform.
 
 ---
 
@@ -129,6 +130,7 @@
 | **21 Oct 2026** | Enablement | Completed Go Reply Global Training: Project Management | Go Reply Training | Mastered project lifecycles, milestone governance, and consulting delivery frameworks (Passed Quiz). |
 | **21 Oct 2026** | Enablement | Completed Go Reply Global Training: Consulting 101 | Go Reply Training | Mastered consulting frameworks, structured problem solving, and client delivery standards (Passed Quiz). |
 | **21 Oct 2026** | Enablement | Completed Go Reply Global Training: Business Change | Go Reply Training | Mastered organizational change management, stakeholder impact analysis, and transformation frameworks (Passed Quiz). |
+| **27 Oct 2026** | Enablement | Attended AI Enabled Software Engineering Training Day | Tristan Warren | Full-day training at QA offices London on AI developer toolchains, code synthesis & testing workflows. |
 
 ---
 
@@ -141,6 +143,7 @@ When meeting with your supervisor or manager:
    - **Master Google stakeholder matrix delivered** to Catherine Whitecourt and Melek Kurudzhu.
    - Finalized **Go Reply Growth Challenge Commercial Co-Sell Deck** with Catherine Whitecourt & Richard Maxwell (20 Oct 2026).
    - Completed **3x Go Reply Global Training Modules & Passed Quizzes** (Project Management, Consulting 101, Business Change on 21 Oct 2026).
+   - Attended full-day **AI Enabled Software Engineering Training Day** at QA offices London organized by Tristan Warren (27 Oct 2026).
    - Volunteered at **Reply & Google Cloud Techie Meetup Q4** with James Housden.
 2. **Current Sprint (Week 2):**
    - Multi-resource test corpus (`01-bucket-topic`) and Plan Reader DAG refinements.

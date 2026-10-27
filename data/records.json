@@ -165,12 +165,19 @@
           "name": "2026 Graduate Cohort",
           "email": "",
           "role": "Peer Graduates"
+        },
+        {
+          "name": "Tristan Warren",
+          "email": "tr.warren@reply.com",
+          "role": "Training Organizer & Engineering Enablement Lead"
         }
       ],
       "startDate": "2026-09-28",
       "targetDate": "Ongoing",
       "summary": "Foundational graduate curriculum encompassing Reply Group corporate practices, consulting delivery standards, technical tools setup, and formal global training programs hosted across Reply shared drives.",
       "techStack": [
+        "AI-Assisted Software Engineering",
+        "Developer AI Toolchains",
         "Project Management Lifecycle",
         "Consulting 101 & Client Delivery",
         "Business Change & Transformation",
@@ -180,7 +187,8 @@
       ],
       "highlights": [
         "Commenced Go Reply employment under the 2026 Graduate Program (28 Sep 2026).",
-        "Completed 3 core Go Reply Global Training modules (Project Management, Consulting 101, and Business Change) on 21 Oct 2026, passing all corresponding follow-up quizzes and mastering delivery lifecycles, structured problem-solving, and change management."
+        "Completed 3 core Go Reply Global Training modules (Project Management, Consulting 101, and Business Change) on 21 Oct 2026, passing all corresponding follow-up quizzes and mastering delivery lifecycles, structured problem-solving, and change management.",
+        "Attended full-day AI Enabled Software Engineering Training Day at the QA offices in London, organized by Tristan Warren (27 Oct 2026)."
       ]
     }
   ],
@@ -560,6 +568,28 @@
         "#ChangeManagement",
         "#GoReply",
         "#Transformation"
+      ]
+    },
+    {
+      "id": "evt-020",
+      "date": "2026-10-27",
+      "title": "Attended AI Enabled Software Engineering Training Day (QA London)",
+      "projectId": "onboarding",
+      "projectName": "Internal Enablement & Global Training",
+      "category": "Technical Enablement",
+      "lead": "Tristan Warren",
+      "collaborators": [
+        "Tristan Warren"
+      ],
+      "description": "Attended a full-day intensive AI Enabled Software Engineering Training Day held at the QA offices in London, organized and led by Tristan Warren (tr.warren@reply.com). The full-day curriculum explored practical AI-augmented software engineering workflows, developer AI toolchains, automated code synthesis, architectural prompt engineering patterns, and AI-assisted testing and refactoring practices.",
+      "impact": "Acquired advanced practical competencies in AI-accelerated software engineering, optimizing developer workflows and code quality standards directly applicable to cloud engineering delivery and the TerraClear Capstone platform.",
+      "tags": [
+        "#AIEngineering",
+        "#SoftwareEngineering",
+        "#GenAI",
+        "#QALondon",
+        "#ReplyEnablement",
+        "#Training"
       ]
     }
   ]

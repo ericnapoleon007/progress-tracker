@@ -211,7 +211,7 @@
 
       <div class="bg-white dark:bg-slate-900 p-3 sm:p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs transition-colors">
         <div class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-0.5 sm:mb-1">Activities Logged</div>
-        <div class="text-lg sm:text-3xl font-extrabold text-rose-600 dark:text-rose-400" id="stat-total-events">20</div>
+        <div class="text-lg sm:text-3xl font-extrabold text-rose-600 dark:text-rose-400" id="stat-total-events">21</div>
         <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5 sm:mt-1 truncate">5 Distinct Tracks</div>
       </div>
 
@@ -239,7 +239,7 @@
         <!-- Filter Chips (Horizontally Swipeable without wrapping on mobile) -->
         <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-0.5 w-full max-w-full">
           <button onclick="setFilter('all')" id="btn-filter-all" class="filter-chip px-3 py-1 rounded-full text-xs font-semibold bg-rose-600 text-white shrink-0 transition">
-            All (20)
+            All (21)
           </button>
           <button onclick="setFilter('terra-clear')" id="btn-filter-terra-clear" class="filter-chip px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 shrink-0 transition">
             TerraClear
@@ -276,7 +276,7 @@
               </span>
             </div>
             <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              <span class="hidden sm:inline">Scroll horizontally</span><span class="sm:hidden">Scroll down</span> from your first day (<strong>28<sup>th</sup> September 2026</strong>) to the most recent milestones (<strong>27<sup>th</sup> October 2026</strong>).
+              <span class="hidden sm:inline">Scroll horizontally</span><span class="sm:hidden">Scroll down</span> from your first day (<strong>28<sup>th</sup> September 2026</strong>) to the most recent milestones (<strong>3<sup>rd</sup> November 2026</strong>).
             </p>
           </div>
 
@@ -294,7 +294,7 @@
               <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </button>
             <button onclick="scrollToEnd()" class="px-2.5 sm:px-3 py-1.5 text-xs font-semibold bg-rose-50 dark:bg-rose-950/60 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-rose-700 dark:text-rose-300 rounded-lg transition flex items-center space-x-1" title="Jump to Latest">
-              <span>Latest (27<sup>th</sup> Oct)</span>
+              <span>Latest (3<sup>rd</sup> Nov)</span>
               <i data-lucide="chevrons-down" class="w-3.5 h-3.5 sm:hidden"></i>
               <i data-lucide="chevrons-right" class="w-3.5 h-3.5 hidden sm:inline"></i>
             </button>
@@ -394,6 +394,10 @@
             <li class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
               <div class="font-semibold text-slate-900 dark:text-white text-xs">AI Enabled Software Engineering Training Day (27<sup>th</sup> Oct)</div>
               <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Attended full-day hands-on engineering training at QA offices London organized by Tristan Warren, mastering AI-assisted software development, generative tooling, and testing workflows.</p>
+            </li>
+            <li class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
+              <div class="font-semibold text-slate-900 dark:text-white text-xs">Enterprise Conversational Agents Webinar (3<sup>rd</sup> Nov)</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Attended technical session delivered by Anthony Youssef exploring Google CX Agent Studio (CXAS), multi-agent A2A interoperability, security guardrails, and real-time Supervisor Agents.</p>
             </li>
           </ul>
         </div>
@@ -595,6 +599,11 @@
           "role": "Organizer / Techie Meetup Lead"
         },
         {
+          "name": "Anthony Youssef",
+          "email": "anthony.youssef@go-reply.co.uk",
+          "role": "Speaker / Google CX Agent Studio Lead"
+        },
+        {
           "name": "Vaylern Chozha Nathan",
           "email": "v.chozhanathan@reply.com",
           "role": "Speaker / Google SecOps Specialist"
@@ -607,16 +616,20 @@
       ],
       "startDate": "2026-10-06",
       "targetDate": "Ongoing",
-      "summary": "Actively contributing to Go Reply community events and deepening knowledge through technical seminars, including volunteering at flagship partner meetups and exploring cutting-edge security operations architectures.",
+      "summary": "Actively contributing to Go Reply community events and deepening knowledge through technical seminars, including volunteering at flagship partner meetups and exploring cutting-edge security operations and conversational AI agent architectures.",
       "techStack": [
+        "Google CX Agent Studio (CXAS)",
+        "Multi-Agent Architectures (A2A)",
+        "Supervisor Agents",
         "Google SecOps",
         "Agentic SOC",
-        "Event Coordination",
-        "Community Networking"
+        "Agent Security & Guardrails",
+        "Event Coordination"
       ],
       "highlights": [
         "Volunteered to set up and manage the Reply & Google Cloud Techie Meetup Q4 alongside James Housden (08 Oct 2026).",
-        "Participated in deep-dive technical seminar 'Agentic SOC in Action with Google SecOps' hosted by Vaylern Chozha Nathan and Faris Moulay (06 Oct 2026)."
+        "Participated in deep-dive technical seminar 'Agentic SOC in Action with Google SecOps' hosted by Vaylern Chozha Nathan and Faris Moulay (06 Oct 2026).",
+        "Attended technical seminar 'Enterprise Conversational Agents with Google CX Agent Studio' delivered by Anthony Youssef at London Nova / SOLAR (03 Nov 2026)."
       ]
     },
     {
@@ -1057,6 +1070,29 @@
         "#QALondon",
         "#ReplyEnablement",
         "#Training"
+      ]
+    },
+    {
+      "id": "evt-021",
+      "date": "2026-11-03",
+      "title": "Attended Technical Seminar: Enterprise Conversational Agents with Google CX Agent Studio",
+      "projectId": "community-events",
+      "projectName": "Community Leadership & Technical Seminars",
+      "category": "Technical Seminar & GenAI",
+      "lead": "Anthony Youssef",
+      "collaborators": [
+        "Anthony Youssef"
+      ],
+      "description": "Attended the technical seminar and webinar 'Enterprise Conversational Agents' hosted at London Nova (SOLAR) and broadcast across Reply, delivered by Anthony Youssef. Explored how Google's CX Agent Studio (CXAS) enables production-ready conversational AI moving beyond rigid conversation flows to flexible, goal-driven agents. Key topics covered included multi-agent architectures, Agent-to-Agent (A2A) interoperability, enterprise tool integrations, real-time hallucination and tool failure detection via asynchronous Supervisor Agents without voice response latency degradation, prompt injection defenses, data leakage prevention, and automated testing frameworks.",
+      "impact": "Gained architectural insights into production conversational AI and multi-agent coordination on Google Cloud, directly informing agentic governance patterns and automated validation strategies for enterprise cloud workloads.",
+      "tags": [
+        "#ConversationalAI",
+        "#CXAgentStudio",
+        "#GoogleCloud",
+        "#AgenticAI",
+        "#SupervisorAgents",
+        "#Security",
+        "#ReplySeminar"
       ]
     }
   ]
@@ -1515,8 +1551,8 @@
           role: "Capstone Supervisor & Senior Cloud Mentor",
           company: "Go Reply",
           email: "anthony.youssef@go-reply.co.uk",
-          projects: ["TerraClear: Fixing the Last Mile of IaC"],
-          notes: "Collaborated on project scope approval, architecture decisions (ADR-01 & ADR-02), and weekly capstone milestones."
+          projects: ["TerraClear: Fixing the Last Mile of IaC", "Enterprise Conversational Agents (CXAS)"],
+          notes: "Collaborated on capstone architecture (ADR-01/02); attended his technical seminar on Google CX Agent Studio and Supervisor Agents (03 Nov 2026)."
         },
         {
           name: "Catherine Whitecourt",

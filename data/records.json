@@ -128,6 +128,11 @@
           "role": "Organizer / Techie Meetup Lead"
         },
         {
+          "name": "Anthony Youssef",
+          "email": "anthony.youssef@go-reply.co.uk",
+          "role": "Speaker / Google CX Agent Studio Lead"
+        },
+        {
           "name": "Vaylern Chozha Nathan",
           "email": "v.chozhanathan@reply.com",
           "role": "Speaker / Google SecOps Specialist"
@@ -140,16 +145,20 @@
       ],
       "startDate": "2026-10-06",
       "targetDate": "Ongoing",
-      "summary": "Actively contributing to Go Reply community events and deepening knowledge through technical seminars, including volunteering at flagship partner meetups and exploring cutting-edge security operations architectures.",
+      "summary": "Actively contributing to Go Reply community events and deepening knowledge through technical seminars, including volunteering at flagship partner meetups and exploring cutting-edge security operations and conversational AI agent architectures.",
       "techStack": [
+        "Google CX Agent Studio (CXAS)",
+        "Multi-Agent Architectures (A2A)",
+        "Supervisor Agents",
         "Google SecOps",
         "Agentic SOC",
-        "Event Coordination",
-        "Community Networking"
+        "Agent Security & Guardrails",
+        "Event Coordination"
       ],
       "highlights": [
         "Volunteered to set up and manage the Reply & Google Cloud Techie Meetup Q4 alongside James Housden (08 Oct 2026).",
-        "Participated in deep-dive technical seminar 'Agentic SOC in Action with Google SecOps' hosted by Vaylern Chozha Nathan and Faris Moulay (06 Oct 2026)."
+        "Participated in deep-dive technical seminar 'Agentic SOC in Action with Google SecOps' hosted by Vaylern Chozha Nathan and Faris Moulay (06 Oct 2026).",
+        "Attended technical seminar 'Enterprise Conversational Agents with Google CX Agent Studio' delivered by Anthony Youssef at London Nova / SOLAR (03 Nov 2026)."
       ]
     },
     {
@@ -590,6 +599,29 @@
         "#QALondon",
         "#ReplyEnablement",
         "#Training"
+      ]
+    },
+    {
+      "id": "evt-021",
+      "date": "2026-11-03",
+      "title": "Attended Technical Seminar: Enterprise Conversational Agents with Google CX Agent Studio",
+      "projectId": "community-events",
+      "projectName": "Community Leadership & Technical Seminars",
+      "category": "Technical Seminar & GenAI",
+      "lead": "Anthony Youssef",
+      "collaborators": [
+        "Anthony Youssef"
+      ],
+      "description": "Attended the technical seminar and webinar 'Enterprise Conversational Agents' hosted at London Nova (SOLAR) and broadcast across Reply, delivered by Anthony Youssef. Explored how Google's CX Agent Studio (CXAS) enables production-ready conversational AI moving beyond rigid conversation flows to flexible, goal-driven agents. Key topics covered included multi-agent architectures, Agent-to-Agent (A2A) interoperability, enterprise tool integrations, real-time hallucination and tool failure detection via asynchronous Supervisor Agents without voice response latency degradation, prompt injection defenses, data leakage prevention, and automated testing frameworks.",
+      "impact": "Gained architectural insights into production conversational AI and multi-agent coordination on Google Cloud, directly informing agentic governance patterns and automated validation strategies for enterprise cloud workloads.",
+      "tags": [
+        "#ConversationalAI",
+        "#CXAgentStudio",
+        "#GoogleCloud",
+        "#AgenticAI",
+        "#SupervisorAgents",
+        "#Security",
+        "#ReplySeminar"
       ]
     }
   ]

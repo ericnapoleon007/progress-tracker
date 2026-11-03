@@ -27,11 +27,12 @@
   4. **Community Meetups & Seminars** (Partner Citizenship & CPD)
   5. **Company Induction & Global Training** (Professional Enablement)
 - **Key Supervisors & Collaborators:**
-  - **Anthony Youssef** (`anthony.youssef@go-reply.co.uk`) — Capstone Supervisor & Senior Mentor
+  - **Anthony Youssef** (`anthony.youssef@go-reply.co.uk`) — Capstone Supervisor, Senior Mentor & Speaker (Google CX Agent Studio)
   - **Catherine Whitecourt** (`c.whitecourt@reply.com`) — Commercial Lead, Google Partner Mapping & Co-Selling
   - **Melek Kurudzhu** (`melek.kurudzhu@go-reply.co.uk`) — Commercial Operations & Event Reconciliation
   - **Richard Maxwell** (`r.maxwell@reply.com`) — Commercial Lead, Gemini Enterprise & GECX Activation
   - **James Housden** (`j.housden@reply.com`) — Community Lead & Host, Techie Meetup Q4
+  - **Tristan Warren** (`tr.warren@reply.com`) — Training Organizer, AI Enabled Software Engineering
   - **Vaylern Chozha Nathan** (`v.chozhanathan@reply.com`) — Presenter, Agentic SOC with Google SecOps
   - **Faris Moulay** (`f.moulay@reply.com`) — Presenter, Agentic SOC with Google SecOps
 
@@ -55,7 +56,8 @@
 * **Key Achievements:**
   - **08 Oct 2026:** Volunteered to coordinate, set up, and manage the **Reply and Google Cloud Techie Meetup Q4** alongside host **James Housden** (`j.housden@reply.com`). Handled logistics, attendee reception, and partner engagement.
   - **06 Oct 2026:** Attended specialized deep-dive technical seminar: **"Agentic SOC in Action with Google SecOps"** presented by **Vaylern Chozha Nathan** (`v.chozhanathan@reply.com`) and **Faris Moulay** (`f.moulay@reply.com`). Analyzed autonomous threat hunting and alert triage workflows.
-* **Impact:** Active contribution to Go Reply partner community building and cross-team knowledge exchange.
+  - **03 Nov 2026:** Attended technical webinar and presentation: **"Enterprise Conversational Agents with Google CX Agent Studio"** delivered by **Anthony Youssef** (`anthony.youssef@go-reply.co.uk`) at London Nova (SOLAR). Explored production conversational AI architectures, multi-agent Agent-to-Agent (A2A) interoperability, enterprise tool integrations, real-time hallucination detection with asynchronous Supervisor Agents, prompt injection defenses, and automated evaluation frameworks.
+* **Impact:** Active contribution to Go Reply partner community building and advancing domain mastery across Google SecOps and enterprise conversational AI platforms.
 
 ---
 
@@ -131,6 +133,7 @@
 | **21 Oct 2026** | Enablement | Completed Go Reply Global Training: Consulting 101 | Go Reply Training | Mastered consulting frameworks, structured problem solving, and client delivery standards (Passed Quiz). |
 | **21 Oct 2026** | Enablement | Completed Go Reply Global Training: Business Change | Go Reply Training | Mastered organizational change management, stakeholder impact analysis, and transformation frameworks (Passed Quiz). |
 | **27 Oct 2026** | Enablement | Attended AI Enabled Software Engineering Training Day | Tristan Warren | Full-day training at QA offices London on AI developer toolchains, code synthesis & testing workflows. |
+| **03 Nov 2026** | Seminars | Attended Enterprise Conversational Agents Webinar (Google CXAS) | Anthony Youssef | Production conversational AI architectures, multi-agent A2A, tool calling & Supervisor Agents. |
 
 ---
 
@@ -144,6 +147,7 @@ When meeting with your supervisor or manager:
    - Finalized **Go Reply Growth Challenge Commercial Co-Sell Deck** with Catherine Whitecourt & Richard Maxwell (20 Oct 2026).
    - Completed **3x Go Reply Global Training Modules & Passed Quizzes** (Project Management, Consulting 101, Business Change on 21 Oct 2026).
    - Attended full-day **AI Enabled Software Engineering Training Day** at QA offices London organized by Tristan Warren (27 Oct 2026).
+   - Attended technical presentation **Enterprise Conversational Agents with Google CX Agent Studio** delivered by Anthony Youssef at London Nova / SOLAR (03 Nov 2026).
    - Volunteered at **Reply & Google Cloud Techie Meetup Q4** with James Housden.
 2. **Current Sprint (Week 2):**
    - Multi-resource test corpus (`01-bucket-topic`) and Plan Reader DAG refinements.

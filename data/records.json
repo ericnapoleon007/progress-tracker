@@ -98,19 +98,24 @@
       "collaborators": [],
       "startDate": "2026-10-01",
       "targetDate": "Ongoing",
-      "summary": "Achieved multiple industry-recognized Google Cloud certifications and hands-on laboratory specializations within the first 6 weeks of joining Go Reply, validating domain competence across Cloud architecture, Generative AI, and enterprise Agent platforms.",
+      "summary": "Achieved multiple industry-recognized Google Cloud and cloud sustainability certifications (Cloud Digital Leader, Generative AI Leader, Associate Cloud Engineer, and Cloud GreenOps for AI) alongside hands-on laboratory specializations within the first 8 weeks of joining Go Reply, validating domain competence across Cloud infrastructure, sustainable operations, and enterprise Agent platforms.",
       "techStack": [
         "Google Cloud Platform (GCP)",
+        "Associate Cloud Engineer (ACE)",
+        "Cloud GreenOps for AI",
         "Cloud Digital Leader (CDL)",
         "Generative AI Leader",
         "Gemini Enterprise",
         "Model Armor",
-        "Gemini Agent Platform"
+        "Gemini Agent Platform",
+        "Sustainable AI Architecture"
       ],
       "highlights": [
         "Google Cloud Certified - Cloud Digital Leader (Passed 05 Oct 2026).",
         "Google Cloud Certified - Generative AI Leader (Passed 09 Oct 2026).",
-        "Completed 3 intensive hands-on lab sessions on Gemini Enterprise (Deploy with Model Armor, Govern Agent Access, Add Agents to Gemini Enterprise) on 13 Oct 2026."
+        "Completed 3 intensive hands-on lab sessions on Gemini Enterprise (Deploy with Model Armor, Govern Agent Access, Add Agents to Gemini Enterprise) on 13 Oct 2026.",
+        "Google Cloud Certified - Associate Cloud Engineer (ACE) (Passed 20 Nov 2026).",
+        "Earned Certification: Cloud GreenOps for AI (Passed 23 Nov 2026)."
       ]
     },
     {
@@ -198,6 +203,61 @@
         "Commenced Go Reply employment under the 2026 Graduate Program (28 Sep 2026).",
         "Completed 3 core Go Reply Global Training modules (Project Management, Consulting 101, and Business Change) on 21 Oct 2026, mastering delivery lifecycles, structured problem-solving, and change management.",
         "Attended full-day AI Enabled Software Engineering Training Day at the QA offices in London, organized by Tristan Warren (27 Oct 2026)."
+      ]
+    },
+    {
+      "id": "village-hotels",
+      "name": "Village Hotels: Strategic AI Advisory & Agent Operating Model",
+      "shortName": "Village Hotels (AI Advisory)",
+      "category": "Client Engagement & AI Advisory",
+      "status": "Active / In Delivery",
+      "lead": "Richard Maxwell",
+      "leadEmail": "r.maxwell@reply.com",
+      "collaborators": [
+        {
+          "name": "Neil Cryer",
+          "email": "",
+          "role": "Head of IT / Primary Sponsor (Village Hotels)"
+        },
+        {
+          "name": "Jon Davis",
+          "email": "",
+          "role": "Client Sponsor (Village Hotels)"
+        },
+        {
+          "name": "Richard Maxwell",
+          "email": "r.maxwell@reply.com",
+          "role": "Delivery Lead (Go Reply)"
+        },
+        {
+          "name": "James Chamberlain",
+          "email": "j.chamberlain@reply.com",
+          "role": "Manager (Go Reply)"
+        },
+        {
+          "name": "Sanskar Gupta",
+          "email": "s.gupta@reply.com",
+          "role": "Technical Lead / Solution Architect (Go Reply)"
+        }
+      ],
+      "startDate": "2026-11-24",
+      "targetDate": "2027-Q4 (Roadmap Execution)",
+      "summary": "On-site strategic GenAI consulting and architectural workshop with Village Hotels executive IT leadership. Documented architectural requirements for the Hospitality Agent Operating Model (including GM Briefing 'AI Chief of Staff' and PMS Care Agent) and structured the Q1–Q4 strategic delivery roadmap from live whiteboard sessions into formal executive minutes and prioritized action items.",
+      "techStack": [
+        "Generative AI",
+        "Hospitality Agent Operating Model",
+        "Google Gemini Enterprise",
+        "PMS Care Agent",
+        "GM Briefing AI Chief of Staff",
+        "Enterprise AI Architecture",
+        "Executive Scribing",
+        "Strategic Roadmapping"
+      ],
+      "highlights": [
+        "Celebrated Village Hotels' 2026 Hotel Cateys 'Best Use of Innovative Technology' award for the Google Gemini Enterprise rollout.",
+        "Partnered on-site with primary client sponsor Neil Cryer (Head of IT) and Jon Davis alongside Go Reply delivery leadership.",
+        "Documented technical and architectural requirements for the Hospitality Agent Operating Model, focusing on the GM Briefing 'AI Chief of Staff' and PMS Care Agent.",
+        "Structured and translated whiteboard strategy sessions into formal project minutes, prioritized governance decisions, and a phased Q1–Q4 delivery roadmap."
       ]
     }
   ],
@@ -619,6 +679,76 @@
         "#SupervisorAgents",
         "#Security",
         "#ReplySeminar"
+      ]
+    },
+    {
+      "id": "evt-022",
+      "date": "2026-11-20",
+      "title": "Earned Google Cloud Certified - Associate Cloud Engineer (ACE)",
+      "projectId": "certifications",
+      "projectName": "Certifications & Accreditations",
+      "category": "Professional Certification",
+      "lead": "Google Cloud",
+      "collaborators": [
+        "Google Cloud"
+      ],
+      "description": "Successfully passed the official Google Cloud Certified - Associate Cloud Engineer (ACE) certification examination. Validated end-to-end expertise in deploying applications, monitoring operations, managing enterprise cloud solutions, provisioning infrastructure via Google Cloud CLI and Cloud Console, configuring access and security policies (Cloud IAM), and managing Google Cloud storage and compute resources.",
+      "impact": "Attained the industry-benchmark Google Cloud engineering credential within 8 weeks of joining Go Reply, validating core operational and infrastructure capability for client deployments and the TerraClear platform.",
+      "tags": [
+        "#Certification",
+        "#GoogleCloud",
+        "#ACE",
+        "#AssociateCloudEngineer",
+        "#CloudInfrastructure",
+        "#IAM"
+      ]
+    },
+    {
+      "id": "evt-023",
+      "date": "2026-11-23",
+      "title": "Earned Certification: Cloud GreenOps for AI",
+      "projectId": "certifications",
+      "projectName": "Certifications & Accreditations",
+      "category": "Professional Certification / Sustainability",
+      "lead": "Cloud & AI Enablement",
+      "collaborators": [],
+      "description": "Successfully passed the Cloud GreenOps for AI certification examination. Demonstrated proficiency in sustainable cloud computing, measuring and reducing carbon footprints for AI/ML workloads, architecting energy-efficient GenAI architectures, and applying GreenOps cost and carbon optimization practices across hyperscaler cloud environments.",
+      "impact": "Expanded technical enablement into sustainable AI architecture and GreenOps engineering, establishing verified capabilities in carbon-aware AI infrastructure optimization.",
+      "tags": [
+        "#Certification",
+        "#GreenOps",
+        "#CloudSustainability",
+        "#SustainableAI",
+        "#GenAI",
+        "#CarbonOptimization"
+      ]
+    },
+    {
+      "id": "evt-024",
+      "date": "2026-11-24",
+      "title": "Village Hotels – Strategic AI Workshop & Scribing",
+      "projectId": "village-hotels",
+      "projectName": "Village Hotels: Strategic AI Advisory & Agent Operating Model",
+      "category": "Client Engagement & Scribing",
+      "lead": "Richard Maxwell",
+      "collaborators": [
+        "Neil Cryer",
+        "Jon Davis",
+        "Richard Maxwell",
+        "James Chamberlain",
+        "Sanskar Gupta"
+      ],
+      "description": "Acted as scribe and consultant during an on-site strategy workshop with client sponsors Neil Cryer (Head of IT / Primary Sponsor) and Jon Davis from Village Hotels, alongside Go Reply delivery leads Richard Maxwell (Delivery Lead), James Chamberlain (Manager), and Sanskar Gupta (Technical Lead / Solution Architect). Captured meeting proceedings, celebrated Village Hotels' 2026 Hotel Cateys 'Best Use of Innovative Technology' win for the Google Gemini Enterprise rollout, documented architectural requirements for the Hospitality Agent Operating Model (including the GM Briefing 'AI Chief of Staff' and PMS Care Agent), and structured the Q1–Q4 strategic delivery roadmap from the whiteboard session into formal project minutes and proposed action items.",
+      "impact": "Delivered comprehensive formal workshop minutes, structured the multi-quarter Hospitality Agent Operating Model roadmap, and supported executive client alignment across Village Hotels and Go Reply delivery leadership.",
+      "tags": [
+        "#VillageHotels",
+        "#StrategicAdvisory",
+        "#Scribing",
+        "#AgentOperatingModel",
+        "#GeminiEnterprise",
+        "#HotelCateys",
+        "#ClientDelivery",
+        "#HospitalityAI"
       ]
     }
   ]

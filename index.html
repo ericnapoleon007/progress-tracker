@@ -205,20 +205,20 @@
 
       <div class="bg-white dark:bg-slate-900 p-3 sm:p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs transition-colors">
         <div class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-0.5 sm:mb-1">Official Certifications</div>
-        <div class="text-lg sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">2 Certs</div>
+        <div class="text-lg sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">4 Certs</div>
         <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5 sm:mt-1 truncate">+ 3 Gemini Labs</div>
       </div>
 
       <div class="bg-white dark:bg-slate-900 p-3 sm:p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs transition-colors">
         <div class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-0.5 sm:mb-1">Activities Logged</div>
-        <div class="text-lg sm:text-3xl font-extrabold text-rose-600 dark:text-rose-400" id="stat-total-events">21</div>
-        <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5 sm:mt-1 truncate">5 Distinct Tracks</div>
+        <div class="text-lg sm:text-3xl font-extrabold text-rose-600 dark:text-rose-400" id="stat-total-events">24</div>
+        <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5 sm:mt-1 truncate">6 Distinct Tracks</div>
       </div>
 
       <div class="bg-white dark:bg-slate-900 p-3 sm:p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs transition-colors">
         <div class="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-0.5 sm:mb-1">Key Stakeholders</div>
-        <div class="text-lg sm:text-3xl font-extrabold text-rose-600 dark:text-rose-400">7 People</div>
-        <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5 sm:mt-1 truncate">Leads & Mentors</div>
+        <div class="text-lg sm:text-3xl font-extrabold text-rose-600 dark:text-rose-400">12 People</div>
+        <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5 sm:mt-1 truncate">Leads, Clients & Mentors</div>
       </div>
     </section>
 
@@ -239,13 +239,16 @@
         <!-- Filter Chips (Horizontally Swipeable without wrapping on mobile) -->
         <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-0.5 w-full max-w-full">
           <button onclick="setFilter('all')" id="btn-filter-all" class="filter-chip px-3 py-1 rounded-full text-xs font-semibold bg-rose-600 text-white shrink-0 transition">
-            All (21)
+            All (24)
           </button>
           <button onclick="setFilter('terra-clear')" id="btn-filter-terra-clear" class="filter-chip px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 shrink-0 transition">
             TerraClear
           </button>
           <button onclick="setFilter('certifications')" id="btn-filter-certifications" class="filter-chip px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 shrink-0 transition">
             Certs & Labs
+          </button>
+          <button onclick="setFilter('village-hotels')" id="btn-filter-village-hotels" class="filter-chip px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 shrink-0 transition">
+            Village Hotels
           </button>
           <button onclick="setFilter('google-stakeholder-mapping')" id="btn-filter-google-stakeholder-mapping" class="filter-chip px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 shrink-0 transition">
             Google Stakeholder
@@ -276,7 +279,7 @@
               </span>
             </div>
             <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              <span class="hidden sm:inline">Scroll horizontally</span><span class="sm:hidden">Scroll down</span> from your first day (<strong>28<sup>th</sup> September 2026</strong>) to the most recent milestones (<strong>3<sup>rd</sup> November 2026</strong>).
+              <span class="hidden sm:inline">Scroll horizontally</span><span class="sm:hidden">Scroll down</span> from your first day (<strong>28<sup>th</sup> September 2026</strong>) to the most recent milestones (<strong>24<sup>th</sup> November 2026</strong>).
             </p>
           </div>
 
@@ -294,7 +297,7 @@
               <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </button>
             <button onclick="scrollToEnd()" class="px-2.5 sm:px-3 py-1.5 text-xs font-semibold bg-rose-50 dark:bg-rose-950/60 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-rose-700 dark:text-rose-300 rounded-lg transition flex items-center space-x-1" title="Jump to Latest">
-              <span>Latest (3<sup>rd</sup> Nov)</span>
+              <span>Latest (24<sup>th</sup> Nov)</span>
               <i data-lucide="chevrons-down" class="w-3.5 h-3.5 sm:hidden"></i>
               <i data-lucide="chevrons-right" class="w-3.5 h-3.5 hidden sm:inline"></i>
             </button>
@@ -360,8 +363,8 @@
               <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Commenced 2026 Graduate Program; setup and alignment completed rapidly.</p>
             </li>
             <li class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
-              <div class="font-semibold text-slate-900 dark:text-white text-xs">2x Google Cloud Certifications Passed</div>
-              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Achieved <strong>Cloud Digital Leader</strong> (5<sup>th</sup> Oct) and <strong>Generative AI Leader</strong> (9<sup>th</sup> Oct) in under 3 weeks.</p>
+              <div class="font-semibold text-slate-900 dark:text-white text-xs">4x Cloud & AI Certifications Passed</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Achieved <strong>Cloud Digital Leader</strong> (5<sup>th</sup> Oct), <strong>Generative AI Leader</strong> (9<sup>th</sup> Oct), <strong>Associate Cloud Engineer (ACE)</strong> (20<sup>th</sup> Nov), and <strong>Cloud GreenOps for AI</strong> (23<sup>rd</sup> Nov).</p>
             </li>
             <li class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
               <div class="font-semibold text-slate-900 dark:text-white text-xs">3x Gemini Enterprise Lab Accreditations</div>
@@ -398,6 +401,18 @@
             <li class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
               <div class="font-semibold text-slate-900 dark:text-white text-xs">Enterprise Conversational Agents Webinar (3<sup>rd</sup> Nov)</div>
               <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Attended technical session delivered by Anthony Youssef exploring Google CX Agent Studio (CXAS), multi-agent A2A interoperability, security guardrails, and real-time Supervisor Agents.</p>
+            </li>
+            <li class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
+              <div class="font-semibold text-slate-900 dark:text-white text-xs">Google Cloud Certified - Associate Cloud Engineer (20<sup>th</sup> Nov)</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Earned official ACE certification, validating enterprise GCP infrastructure, compute/storage provisioning, and Cloud IAM governance.</p>
+            </li>
+            <li class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
+              <div class="font-semibold text-slate-900 dark:text-white text-xs">Cloud GreenOps for AI Certified (23<sup>rd</sup> Nov)</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Earned Cloud GreenOps for AI credential, demonstrating expertise in sustainable cloud architecture and carbon-aware AI workload optimization.</p>
+            </li>
+            <li class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
+              <div class="font-semibold text-slate-900 dark:text-white text-xs">Village Hotels Strategic AI Workshop & Scribing (24<sup>th</sup> Nov)</div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Acted as scribe & consultant on-site with client sponsors Neil Cryer & Jon Davis and Go Reply leads (Richard Maxwell, James Chamberlain, Sanskar Gupta); celebrated 2026 Hotel Cateys win, captured Hospitality Agent Operating Model specs, and structured Q1–Q4 delivery roadmap.</p>
             </li>
           </ul>
         </div>
@@ -569,19 +584,24 @@
       "collaborators": [],
       "startDate": "2026-10-01",
       "targetDate": "Ongoing",
-      "summary": "Achieved multiple industry-recognized Google Cloud certifications and hands-on laboratory specializations within the first 6 weeks of joining Go Reply, validating domain competence across Cloud architecture, Generative AI, and enterprise Agent platforms.",
+      "summary": "Achieved multiple industry-recognized Google Cloud and cloud sustainability certifications (Cloud Digital Leader, Generative AI Leader, Associate Cloud Engineer, and Cloud GreenOps for AI) alongside hands-on laboratory specializations within the first 8 weeks of joining Go Reply, validating domain competence across Cloud infrastructure, sustainable operations, and enterprise Agent platforms.",
       "techStack": [
         "Google Cloud Platform (GCP)",
+        "Associate Cloud Engineer (ACE)",
+        "Cloud GreenOps for AI",
         "Cloud Digital Leader (CDL)",
         "Generative AI Leader",
         "Gemini Enterprise",
         "Model Armor",
-        "Gemini Agent Platform"
+        "Gemini Agent Platform",
+        "Sustainable AI Architecture"
       ],
       "highlights": [
         "Google Cloud Certified - Cloud Digital Leader (Passed 05 Oct 2026).",
         "Google Cloud Certified - Generative AI Leader (Passed 09 Oct 2026).",
-        "Completed 3 intensive hands-on lab sessions on Gemini Enterprise (Deploy with Model Armor, Govern Agent Access, Add Agents to Gemini Enterprise) on 13 Oct 2026."
+        "Completed 3 intensive hands-on lab sessions on Gemini Enterprise (Deploy with Model Armor, Govern Agent Access, Add Agents to Gemini Enterprise) on 13 Oct 2026.",
+        "Google Cloud Certified - Associate Cloud Engineer (ACE) (Passed 20 Nov 2026).",
+        "Earned Certification: Cloud GreenOps for AI (Passed 23 Nov 2026)."
       ]
     },
     {
@@ -669,6 +689,61 @@
         "Commenced Go Reply employment under the 2026 Graduate Program (28 Sep 2026).",
         "Completed 3 core Go Reply Global Training modules (Project Management, Consulting 101, and Business Change) on 21 Oct 2026, mastering delivery lifecycles, structured problem-solving, and change management.",
         "Attended full-day AI Enabled Software Engineering Training Day at the QA offices in London, organized by Tristan Warren (27 Oct 2026)."
+      ]
+    },
+    {
+      "id": "village-hotels",
+      "name": "Village Hotels: Strategic AI Advisory & Agent Operating Model",
+      "shortName": "Village Hotels (AI Advisory)",
+      "category": "Client Engagement & AI Advisory",
+      "status": "Active / In Delivery",
+      "lead": "Richard Maxwell",
+      "leadEmail": "r.maxwell@reply.com",
+      "collaborators": [
+        {
+          "name": "Neil Cryer",
+          "email": "",
+          "role": "Head of IT / Primary Sponsor (Village Hotels)"
+        },
+        {
+          "name": "Jon Davis",
+          "email": "",
+          "role": "Client Sponsor (Village Hotels)"
+        },
+        {
+          "name": "Richard Maxwell",
+          "email": "r.maxwell@reply.com",
+          "role": "Delivery Lead (Go Reply)"
+        },
+        {
+          "name": "James Chamberlain",
+          "email": "j.chamberlain@reply.com",
+          "role": "Manager (Go Reply)"
+        },
+        {
+          "name": "Sanskar Gupta",
+          "email": "s.gupta@reply.com",
+          "role": "Technical Lead / Solution Architect (Go Reply)"
+        }
+      ],
+      "startDate": "2026-11-24",
+      "targetDate": "2027-Q4 (Roadmap Execution)",
+      "summary": "On-site strategic GenAI consulting and architectural workshop with Village Hotels executive IT leadership. Documented architectural requirements for the Hospitality Agent Operating Model (including GM Briefing 'AI Chief of Staff' and PMS Care Agent) and structured the Q1–Q4 strategic delivery roadmap from live whiteboard sessions into formal executive minutes and prioritized action items.",
+      "techStack": [
+        "Generative AI",
+        "Hospitality Agent Operating Model",
+        "Google Gemini Enterprise",
+        "PMS Care Agent",
+        "GM Briefing AI Chief of Staff",
+        "Enterprise AI Architecture",
+        "Executive Scribing",
+        "Strategic Roadmapping"
+      ],
+      "highlights": [
+        "Celebrated Village Hotels' 2026 Hotel Cateys 'Best Use of Innovative Technology' award for the Google Gemini Enterprise rollout.",
+        "Partnered on-site with primary client sponsor Neil Cryer (Head of IT) and Jon Davis alongside Go Reply delivery leadership.",
+        "Documented technical and architectural requirements for the Hospitality Agent Operating Model, focusing on the GM Briefing 'AI Chief of Staff' and PMS Care Agent.",
+        "Structured and translated whiteboard strategy sessions into formal project minutes, prioritized governance decisions, and a phased Q1–Q4 delivery roadmap."
       ]
     }
   ],
@@ -1091,6 +1166,76 @@
         "#Security",
         "#ReplySeminar"
       ]
+    },
+    {
+      "id": "evt-022",
+      "date": "2026-11-20",
+      "title": "Earned Google Cloud Certified - Associate Cloud Engineer (ACE)",
+      "projectId": "certifications",
+      "projectName": "Certifications & Accreditations",
+      "category": "Professional Certification",
+      "lead": "Google Cloud",
+      "collaborators": [
+        "Google Cloud"
+      ],
+      "description": "Successfully passed the official Google Cloud Certified - Associate Cloud Engineer (ACE) certification examination. Validated end-to-end expertise in deploying applications, monitoring operations, managing enterprise cloud solutions, provisioning infrastructure via Google Cloud CLI and Cloud Console, configuring access and security policies (Cloud IAM), and managing Google Cloud storage and compute resources.",
+      "impact": "Attained the industry-benchmark Google Cloud engineering credential within 8 weeks of joining Go Reply, validating core operational and infrastructure capability for client deployments and the TerraClear platform.",
+      "tags": [
+        "#Certification",
+        "#GoogleCloud",
+        "#ACE",
+        "#AssociateCloudEngineer",
+        "#CloudInfrastructure",
+        "#IAM"
+      ]
+    },
+    {
+      "id": "evt-023",
+      "date": "2026-11-23",
+      "title": "Earned Certification: Cloud GreenOps for AI",
+      "projectId": "certifications",
+      "projectName": "Certifications & Accreditations",
+      "category": "Professional Certification / Sustainability",
+      "lead": "Cloud & AI Enablement",
+      "collaborators": [],
+      "description": "Successfully passed the Cloud GreenOps for AI certification examination. Demonstrated proficiency in sustainable cloud computing, measuring and reducing carbon footprints for AI/ML workloads, architecting energy-efficient GenAI architectures, and applying GreenOps cost and carbon optimization practices across hyperscaler cloud environments.",
+      "impact": "Expanded technical enablement into sustainable AI architecture and GreenOps engineering, establishing verified capabilities in carbon-aware AI infrastructure optimization.",
+      "tags": [
+        "#Certification",
+        "#GreenOps",
+        "#CloudSustainability",
+        "#SustainableAI",
+        "#GenAI",
+        "#CarbonOptimization"
+      ]
+    },
+    {
+      "id": "evt-024",
+      "date": "2026-11-24",
+      "title": "Village Hotels – Strategic AI Workshop & Scribing",
+      "projectId": "village-hotels",
+      "projectName": "Village Hotels: Strategic AI Advisory & Agent Operating Model",
+      "category": "Client Engagement & Scribing",
+      "lead": "Richard Maxwell",
+      "collaborators": [
+        "Neil Cryer",
+        "Jon Davis",
+        "Richard Maxwell",
+        "James Chamberlain",
+        "Sanskar Gupta"
+      ],
+      "description": "Acted as scribe and consultant during an on-site strategy workshop with client sponsors Neil Cryer (Head of IT / Primary Sponsor) and Jon Davis from Village Hotels, alongside Go Reply delivery leads Richard Maxwell (Delivery Lead), James Chamberlain (Manager), and Sanskar Gupta (Technical Lead / Solution Architect). Captured meeting proceedings, celebrated Village Hotels' 2026 Hotel Cateys 'Best Use of Innovative Technology' win for the Google Gemini Enterprise rollout, documented architectural requirements for the Hospitality Agent Operating Model (including the GM Briefing 'AI Chief of Staff' and PMS Care Agent), and structured the Q1–Q4 strategic delivery roadmap from the whiteboard session into formal project minutes and proposed action items.",
+      "impact": "Delivered comprehensive formal workshop minutes, structured the multi-quarter Hospitality Agent Operating Model roadmap, and supported executive client alignment across Village Hotels and Go Reply delivery leadership.",
+      "tags": [
+        "#VillageHotels",
+        "#StrategicAdvisory",
+        "#Scribing",
+        "#AgentOperatingModel",
+        "#GeminiEnterprise",
+        "#HotelCateys",
+        "#ClientDelivery",
+        "#HospitalityAI"
+      ]
     }
   ]
 };
@@ -1309,21 +1454,24 @@
         const isCert = item.projectId === 'certifications';
         const isCommunity = item.projectId === 'community-events';
         const isOnboarding = item.projectId === 'onboarding';
+        const isVillage = item.projectId === 'village-hotels';
         
         let badgeColor = isTerra 
           ? 'bg-rose-50 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 border-rose-200 dark:border-rose-800' 
           : (isCert ? 'bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800' : 
             (isCommunity ? 'bg-purple-50 dark:purple-950/80 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800' :
             (isGoogle ? 'bg-amber-50 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800' : 
-            (isOnboarding ? 'bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700'))));
+            (isVillage ? 'bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border-indigo-200 dark:border-indigo-800' :
+            (isOnboarding ? 'bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700')))));
 
         let accentBorder = isTerra ? 'border-t-rose-500' : 
           (isCert ? 'border-t-emerald-500' : 
           (isCommunity ? 'border-t-purple-500' :
           (isGoogle ? 'border-t-amber-500' : 
-          (isOnboarding ? 'border-t-blue-500' : 'border-t-indigo-500'))));
+          (isVillage ? 'border-t-indigo-500' :
+          (isOnboarding ? 'border-t-blue-500' : 'border-t-slate-500')))));
 
-        let iconName = isOnboarding ? 'graduation-cap' : (isCert ? 'award' : (isCommunity ? 'users' : (isTerra ? 'code' : 'briefcase')));
+        let iconName = isOnboarding ? 'graduation-cap' : (isCert ? 'award' : (isCommunity ? 'users' : (isTerra ? 'code' : (isVillage ? 'building-2' : 'briefcase'))));
 
         const card = document.createElement('div');
         card.className = `w-full max-w-full md:w-auto md:min-w-[360px] md:max-w-[380px] md:shrink-0 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-all rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-xs flex flex-col justify-between border-t-4 ${accentBorder}`;
@@ -1450,9 +1598,10 @@
         const isCert = project.id === 'certifications';
         const isCommunity = project.id === 'community-events';
         const isGoogle = project.id === 'google-stakeholder-mapping';
+        const isVillage = project.id === 'village-hotels';
 
-        let cardBorder = isTerra ? 'border-rose-200 dark:border-rose-800' : (isCert ? 'border-emerald-200 dark:border-emerald-800' : (isCommunity ? 'border-purple-200 dark:border-purple-800' : 'border-amber-200 dark:border-amber-800'));
-        let headerBg = isTerra ? 'from-rose-50 to-red-50 dark:from-rose-950/40 dark:to-red-950/40' : (isCert ? 'from-emerald-50 to-teal-50 dark:from-emerald-950/40 dark:to-teal-950/40' : (isCommunity ? 'from-purple-50 to-indigo-50 dark:from-purple-950/40 dark:to-indigo-950/40' : 'from-amber-50 to-orange-50 dark:from-amber-950/40 dark:to-orange-950/40'));
+        let cardBorder = isTerra ? 'border-rose-200 dark:border-rose-800' : (isCert ? 'border-emerald-200 dark:border-emerald-800' : (isCommunity ? 'border-purple-200 dark:border-purple-800' : (isGoogle ? 'border-amber-200 dark:border-amber-800' : (isVillage ? 'border-indigo-200 dark:border-indigo-800' : 'border-blue-200 dark:border-blue-800'))));
+        let headerBg = isTerra ? 'from-rose-50 to-red-50 dark:from-rose-950/40 dark:to-red-950/40' : (isCert ? 'from-emerald-50 to-teal-50 dark:from-emerald-950/40 dark:to-teal-950/40' : (isCommunity ? 'from-purple-50 to-indigo-50 dark:from-purple-950/40 dark:to-indigo-950/40' : (isGoogle ? 'from-amber-50 to-orange-50 dark:from-amber-950/40 dark:to-orange-950/40' : (isVillage ? 'from-indigo-50 to-blue-50 dark:from-indigo-950/40 dark:to-blue-950/40' : 'from-blue-50 to-sky-50 dark:from-blue-950/40 dark:to-sky-950/40'))));
 
         const el = document.createElement('div');
         el.className = `bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl border ${cardBorder} shadow-xs overflow-hidden transition-colors`;
@@ -1598,6 +1747,46 @@
           email: "tr.warren@reply.com",
           projects: ["AI Enabled Software Engineering Training Day"],
           notes: "Organized and hosted full-day hands-on engineering training day at the QA offices in London on 27th Oct 2026."
+        },
+        {
+          name: "Richard Maxwell",
+          role: "Delivery Lead & Commercial Activation Lead",
+          company: "Go Reply",
+          email: "r.maxwell@reply.com",
+          projects: ["Village Hotels: Strategic AI Workshop & Roadmap", "Google Growth Challenge Co-Sell Deck"],
+          notes: "Go Reply Delivery Lead for Village Hotels AI Strategy Workshop and commercial activation lead for Google Gemini Enterprise co-sell initiatives."
+        },
+        {
+          name: "Neil Cryer",
+          role: "Head of IT / Primary Client Sponsor",
+          company: "Village Hotels",
+          email: "",
+          projects: ["Village Hotels: Strategic AI Advisory & Agent Operating Model"],
+          notes: "Primary client sponsor and Head of IT at Village Hotels; partnered on Hospitality Agent Operating Model, Hotel Cateys celebration, and AI delivery roadmap."
+        },
+        {
+          name: "Jon Davis",
+          role: "Client Sponsor & IT Leadership",
+          company: "Village Hotels",
+          email: "",
+          projects: ["Village Hotels: Strategic AI Advisory & Agent Operating Model"],
+          notes: "Client sponsor from Village Hotels; participated in on-site strategy workshop defining GM Briefing 'AI Chief of Staff' and PMS Care Agent priorities."
+        },
+        {
+          name: "James Chamberlain",
+          role: "Manager",
+          company: "Go Reply",
+          email: "j.chamberlain@reply.com",
+          projects: ["Village Hotels: Strategic AI Advisory & Agent Operating Model"],
+          notes: "Engagement Manager for Village Hotels strategy workshop, managing client stakeholder relations, project scope, and multi-quarter delivery milestones."
+        },
+        {
+          name: "Sanskar Gupta",
+          role: "Technical Lead / Solution Architect",
+          company: "Go Reply",
+          email: "s.gupta@reply.com",
+          projects: ["Village Hotels: Strategic AI Advisory & Agent Operating Model"],
+          notes: "Solution Architect leading technical requirements and architecture for Village Hotels' GM Briefing 'AI Chief of Staff' and PMS Care Agent."
         }
       ];
 

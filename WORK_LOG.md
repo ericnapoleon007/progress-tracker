@@ -3,7 +3,7 @@
 **Company:** Go Reply (Reply Group)  
 **Role:** Cloud Consultant  
 **Start Date:** 28 September 2026  
-**Last Updated:** 20 October 2026  
+**Last Updated:** 24 November 2026  
 **Interactive Dashboard:** Open [`index.html`](file:///Users/ericnapoleon/Downloads/progress%20tracker/index.html) in your browser.
 
 ---
@@ -11,10 +11,12 @@
 ## Executive Summary & Key Milestones
 
 - **Start Date:** **28 September 2026** (Go Reply Grads 2026)
-- **Total Logged Activities:** 19 major milestones, deliverables, and events
-- **Official Google Cloud Certifications:**
+- **Total Logged Activities:** 24 major milestones, deliverables, and events
+- **Official Google Cloud & Sustainability Certifications:**
   - **Google Cloud Certified - Cloud Digital Leader** (Achieved 05 Oct 2026)
   - **Google Cloud Certified - Generative AI Leader** (Achieved 09 Oct 2026)
+  - **Google Cloud Certified - Associate Cloud Engineer (ACE)** (Achieved 20 Nov 2026)
+  - **Cloud GreenOps for AI** (Achieved 23 Nov 2026)
 - **Hands-On Specialization Labs:**
   - **3x Gemini Enterprise Lab Accreditations** (Completed 13 Oct 2026):
     1. *Deploy Gemini Enterprise with Workspace Data Sources and Model Armor*
@@ -26,11 +28,16 @@
   3. **Google Cloud Certifications & Accreditations** (Technical Enablement)
   4. **Community Meetups & Seminars** (Partner Citizenship & CPD)
   5. **Company Induction & Global Training** (Professional Enablement)
-- **Key Supervisors & Collaborators:**
+  6. **Village Hotels – Strategic AI Advisory & Agent Operating Model** (Client Engagement & Advisory)
+- **Key Supervisors, Clients & Collaborators:**
   - **Anthony Youssef** (`anthony.youssef@go-reply.co.uk`) — Capstone Supervisor, Senior Mentor & Speaker (Google CX Agent Studio)
   - **Catherine Whitecourt** (`c.whitecourt@reply.com`) — Commercial Lead, Google Partner Mapping & Co-Selling
   - **Melek Kurudzhu** (`melek.kurudzhu@go-reply.co.uk`) — Commercial Operations & Event Reconciliation
-  - **Richard Maxwell** (`r.maxwell@reply.com`) — Commercial Lead, Gemini Enterprise & GECX Activation
+  - **Richard Maxwell** (`r.maxwell@reply.com`) — Delivery Lead, Village Hotels & Commercial Activation Lead
+  - **Neil Cryer** — Primary Client Sponsor & Head of IT, Village Hotels
+  - **Jon Davis** — Client Sponsor, Village Hotels
+  - **James Chamberlain** (`j.chamberlain@reply.com`) — Manager, Go Reply
+  - **Sanskar Gupta** (`s.gupta@reply.com`) — Technical Lead & Solution Architect, Go Reply
   - **James Housden** (`j.housden@reply.com`) — Community Lead & Host, Techie Meetup Q4
   - **Tristan Warren** (`tr.warren@reply.com`) — Training Organizer, AI Enabled Software Engineering
   - **Vaylern Chozha Nathan** (`v.chozhanathan@reply.com`) — Presenter, Agentic SOC with Google SecOps
@@ -42,12 +49,14 @@
 
 ### Track 1: Google Cloud Certifications & Hands-On Accreditations
 * **Category:** Professional Credentials & Technical Enablement
-* **Objective:** Fast-track verified technical competence across Google Cloud architecture, enterprise Generative AI strategy, and AI agent platform governance.
+* **Objective:** Fast-track verified technical competence across Google Cloud architecture, enterprise Generative AI strategy, cloud infrastructure operations, and sustainable AI governance.
 * **Key Achievements:**
   - **05 Oct 2026:** Passed **Google Cloud Certified - Cloud Digital Leader (CDL)**.
   - **09 Oct 2026:** Passed **Google Cloud Certified - Generative AI Leader**.
   - **13 Oct 2026:** Completed 3 intensive practical lab sessions on Gemini Enterprise covering Model Armor safety filtering, agent identity/access governance, and Workspace grounding.
-* **Business & Review Impact:** Achieved 2 official Google Cloud certifications within the first 3 weeks of employment, directly reinforcing technical credibility for Capstone development and enterprise client advisory.
+  - **20 Nov 2026:** Passed **Google Cloud Certified - Associate Cloud Engineer (ACE)**, verifying end-to-end competency in deploying applications, monitoring operations, managing enterprise cloud solutions, provisioning infrastructure via gcloud CLI/Console, and configuring Cloud IAM policies.
+  - **23 Nov 2026:** Passed **Cloud GreenOps for AI Certification**, validating skills in carbon-efficient AI architectures, energy measurement, and hyperscaler GreenOps practices.
+* **Business & Review Impact:** Achieved 4 industry-recognized Google Cloud and sustainability certifications within 8 weeks, providing strong verified technical and architectural authority across client engagements and the TerraClear Capstone platform.
 
 ---
 
@@ -108,6 +117,21 @@
 
 ---
 
+### Track 6: Village Hotels – Strategic AI Advisory & Agent Operating Model
+* **Category:** Client Engagement & Enterprise GenAI Advisory
+* **Client Sponsors:** Neil Cryer (Head of IT / Primary Sponsor), Jon Davis (Village Hotels)
+* **Go Reply Delivery Leads:** Richard Maxwell (Delivery Lead), James Chamberlain (Manager), Sanskar Gupta (Technical Lead / Solution Architect)
+* **Timeframe:** November 2026 – Ongoing (Target Roadmap: 2027-Q4)
+* **Status:** Active / In Delivery
+* **Scope & Key Deliverables:**
+  - Acted as on-site scribe and consultant during high-level strategic workshop with Village Hotels executive IT leadership.
+  - Celebrated Village Hotels' **2026 Hotel Cateys "Best Use of Innovative Technology"** award for their Google Gemini Enterprise deployment.
+  - Documented architectural and technical requirements for the **Hospitality Agent Operating Model**, including the **GM Briefing "AI Chief of Staff"** and the **PMS Care Agent**.
+  - Structured the whiteboard strategic planning session into formal executive minutes, prioritized action items, and a phased Q1–Q4 delivery roadmap.
+* **Business & Review Impact:** Direct on-site client advisory contribution alongside senior Go Reply leaders and primary enterprise sponsors, establishing clear technical delivery requirements for flagship hospitality AI agents.
+
+---
+
 ## 2. Master Chronological Activity Log (28 Sep 2026 &rarr; Present)
 
 | Date | Track / Project | Activity / Milestone | Key People | Impact / Deliverable |
@@ -134,6 +158,9 @@
 | **21 Oct 2026** | Enablement | Completed Go Reply Global Training: Business Change | Go Reply Training | Mastered organizational change management, stakeholder impact analysis, and transformation frameworks. |
 | **27 Oct 2026** | Enablement | Attended AI Enabled Software Engineering Training Day | Tristan Warren | Full-day training at QA offices London on AI developer toolchains, code synthesis & testing workflows. |
 | **03 Nov 2026** | Seminars | Attended Enterprise Conversational Agents Webinar (Google CXAS) | Anthony Youssef | Production conversational AI architectures, multi-agent A2A, tool calling & Supervisor Agents. |
+| **20 Nov 2026** | Certifications | Passed Google Cloud Certified - Associate Cloud Engineer (ACE) | Google Cloud | Benchmark GCP credential covering compute, storage, networking & Cloud IAM. |
+| **23 Nov 2026** | Certifications | Passed Cloud GreenOps for AI Certification | Cloud & AI Enablement | Demonstrated competence in sustainable cloud computing and carbon-aware AI architecture. |
+| **24 Nov 2026** | Village Hotels | Strategic AI Workshop Scribing & Consulting | Neil Cryer, Jon Davis, Richard Maxwell, James Chamberlain, Sanskar Gupta | On-site scribing; Hotel Cateys celebration; captured Hospitality Agent Operating Model & structured Q1–Q4 roadmap. |
 
 ---
 
@@ -141,7 +168,8 @@
 
 When meeting with your supervisor or manager:
 1. **Recent Wins & Fast Milestones:**
-   - Joined 28 Sep 2026 & achieved **2 Google Cloud Certifications** (Cloud Digital Leader + Generative AI Leader) + **3 Gemini Enterprise Labs** within 3 weeks.
+   - Joined 28 Sep 2026 & achieved **4 Cloud & Sustainability Certifications** (Cloud Digital Leader, Generative AI Leader, Associate Cloud Engineer, Cloud GreenOps for AI) + **3 Gemini Enterprise Labs**.
+   - Acted as **on-site scribe and consultant for Village Hotels Strategic AI Workshop** (24 Nov 2026) alongside Neil Cryer (Head of IT), Jon Davis, Richard Maxwell, James Chamberlain, and Sanskar Gupta; captured Hospitality Agent Operating Model (GM Briefing AI Chief of Staff & PMS Care Agent) and structured Q1–Q4 strategic roadmap.
    - **TerraClear Week 1 100% complete** ahead of schedule; Phase 2 DAG parser built with **14 passing automated tests**.
    - **Master Google stakeholder matrix delivered** to Catherine Whitecourt and Melek Kurudzhu.
    - Finalized **Go Reply Growth Challenge Commercial Co-Sell Deck** with Catherine Whitecourt & Richard Maxwell (20 Oct 2026).
